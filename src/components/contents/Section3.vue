@@ -1,24 +1,26 @@
 <template>
   <section class="section3">
-    <div class="section3-intro">
-      <img :src="titleUrl" class="section3-intro-title" />
-      <img :src="characterUrl" class="section3-intro-char" />
-      <div class="section3-intro-box">
-        <div class="left">
-          <img :src="introTitle" class="title" />
-          <img :src="introTitleText" class="pc-only" />
-          <img :src="introTitleTextMo" class="mobile-only" />
+    <div class="section3-box">
+      <div class="section3-intro">
+        <img :src="titleUrl" class="section3-intro-title" />
+        <img :src="characterUrl" class="section3-intro-char" />
+        <div class="section3-intro-box">
+          <div class="left">
+            <img :src="introTitle" class="title" />
+            <img :src="introTitleText" class="pc-only" />
+            <img :src="introTitleTextMo" class="mobile-only" />
+          </div>
+          <div class="right">
+            <img :src="introTitle2" class="title" />
+            <img :src="introTitleText2" class="pc-only" />
+            <img :src="introTitleText2Mo" class="mobile-only" />
+          </div>
         </div>
-        <div class="right">
-          <img :src="introTitle2" class="title" />
-          <img :src="introTitleText2" class="pc-only" />
-          <img :src="introTitleText2Mo" class="mobile-only" />
+        <div class="section3-panel">
+          <img :src="titleUrl2" class="section3-panel-title" />
+          <img :src="panelMember" class="section3-panel-member pc-only" />
+          <img :src="panelMemberMo" class="section3-panel-member mobile-only" />
         </div>
-      </div>
-      <div class="section3-panel">
-        <img :src="titleUrl2" class="section3-panel-title" />
-        <img :src="panelMember" class="section3-panel-member pc-only" />
-        <img :src="panelMemberMo" class="section3-panel-member mobile-only" />
       </div>
     </div>
   </section>
