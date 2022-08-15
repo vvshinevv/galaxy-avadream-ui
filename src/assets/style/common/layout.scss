@@ -30,27 +30,29 @@ body {
 
 //footer
 .footer {
+  background: #060d33;
   flex: none;
-  width: 100%;
-  max-width: $content-width;
-  height: 320px;
-  margin: 0 auto;
-  box-sizing: content-box;
-  padding: 0 0 40px;
-  background: #060d33 url("@/assets/image/bg_footer.png") no-repeat center top;
-  background-size: contain;
-  @include breakpoint(tablet) {
-    height: 160px;
+  &-box{
+    max-width: $content-width;
+    height: 320px;
     margin: 0 auto;
-    background: #060d33 url("@/assets/image/bg_footer_mo.png") no-repeat center
-    top;
+    box-sizing: content-box;
+    padding: 0 0 40px;
+    background: #060d33 url("@/assets/image/bg_footer.png") no-repeat center top;
     background-size: contain;
-  }
-  @include breakpoint(mobile) {
-    height: 160px;
-    margin: 0 auto;
-    background: #060d33 url("@/assets/image/bg_footer_mo.png") no-repeat center
-    top;
-    background-size: contain;
+    @include breakpoint(tablet) {
+      height: 160px;
+      margin: 0 auto;
+      background: #060d33 url("@/assets/image/bg_footer_mo.png") no-repeat center
+      top;
+      background-size: contain;
+    }
+    @include breakpoint(mobile) {
+      height: 160px;
+      margin: 0 auto;
+      background: #060d33 url("@/assets/image/bg_footer_mo.png") no-repeat center
+      top;
+      background-size: contain;
+    }
   }
 }

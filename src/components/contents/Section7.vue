@@ -1,30 +1,32 @@
 <template>
   <section class="section7">
-    <h1>
-      <img :src="titleUrl" class="section7-title-sub" />
-      <img :src="titleUrl2" class="section7-title" />
-    </h1>
-    <div class="section7-swiper">
-      <swiper
-        :navigation="true"
-        :slidesPerView="'auto'"
-        :spaceBetween="30"
-        :modules="modules"
-        :breakpoints="{
+    <div class="section7-box">
+      <h1>
+        <img :src="titleUrl" class="section7-title-sub" />
+        <img :src="titleUrl2" class="section7-title" />
+      </h1>
+      <div class="section7-swiper">
+        <swiper
+            :navigation="true"
+            :slidesPerView="'auto'"
+            :spaceBetween="30"
+            :modules="modules"
+            :breakpoints="{
           '320': {
             spaceBetween: 20,
           },
         }"
-      >
-        <swiper-slide
-          v-for="(image, idx) of imgUrl"
-          :key="'slide_image_' + idx"
         >
-          <div class="image-card-box" :style="back">
-            <img :src="image.src" class="image-card" />
-          </div>
-        </swiper-slide>
-      </swiper>
+          <swiper-slide
+              v-for="(image, idx) of imgUrl"
+              :key="'slide_image_' + idx"
+          >
+            <div class="image-card-box" :style="back">
+              <img :src="image.src" class="image-card" />
+            </div>
+          </swiper-slide>
+        </swiper>
+      </div>
     </div>
   </section>
 </template>

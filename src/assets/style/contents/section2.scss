@@ -10,7 +10,9 @@
   box-sizing: border-box;
   max-width: $content-width;
   background-size: cover;
+  margin: 0 auto;
   &-title {
+    margin-top: 80px;
     width: 670px;
     @include breakpoint(tablet) {
       margin-top: 40px;

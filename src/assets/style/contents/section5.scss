@@ -2,17 +2,29 @@
 @import "../common/mixin";
 
 .section5 {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  max-width: $content-width;
-  margin: 0 auto;
+  background: #000;
   padding: 0 60px;
   @include breakpoint(mobile) {
-    padding: 60px 20px;
-    background: #000;
+    padding: 0 20px;
+  }
+  .swiper{
+    padding-top: 80px;
+    margin-top: -66px;
+    @include breakpoint(mobile) {
+      padding: 0;
+      margin-top: 0;
+    }
+  }
+  &-box{
+    margin: 0 auto;
+    padding: 50px 0 80px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: $content-width;
+
   }
   h1 {
     display: flex;

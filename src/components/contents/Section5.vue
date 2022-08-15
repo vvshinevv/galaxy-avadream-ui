@@ -1,32 +1,34 @@
 <template>
   <section class="section5">
-    <h1>
-      <img :src="titleUrl" class="section5-title-sub" />
-      <img :src="titleUrl2" class="section5-title" />
-    </h1>
-    <div class="section5-swiper pc-only">
-      <swiper
-        :navigation="true"
-        :slidesPerView="'auto'"
-        :spaceBetween="30"
-        :modules="modules"
-      >
-        <swiper-slide
-          v-for="(image, idx) of imgUrl"
-          :key="'slide_image_' + idx"
+    <div class="section5-box">
+      <h1>
+        <img :src="titleUrl" class="section5-title-sub" />
+        <img :src="titleUrl2" class="section5-title" />
+      </h1>
+      <div class="section5-swiper pc-only">
+        <swiper
+            :navigation="true"
+            :slidesPerView="'auto'"
+            :spaceBetween="30"
+            :modules="modules"
         >
-          <div class="image-card-box" :style="back">
-            <img :src="image.src" class="image-card" />
-          </div>
-        </swiper-slide>
-      </swiper>
-    </div>
-    <div class="section5-swiper mobile-only">
-      <ul class="section5-mo-list">
-        <li v-for="itemMo of imgUrlMo">
-          <img :src="itemMo.src" />
-        </li>
-      </ul>
+          <swiper-slide
+              v-for="(image, idx) of imgUrl"
+              :key="'slide_image_' + idx"
+          >
+            <div class="image-card-box" :style="back">
+              <img :src="image.src" class="image-card" />
+            </div>
+          </swiper-slide>
+        </swiper>
+      </div>
+      <div class="section5-swiper mobile-only">
+        <ul class="section5-mo-list">
+          <li v-for="itemMo of imgUrlMo">
+            <img :src="itemMo.src" />
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>

@@ -9,7 +9,7 @@
   flex-direction: column;
   max-width: $content-width;
   margin: 0 auto;
-  padding: 50px 60px;
+  padding: 120px 60px;
   @include breakpoint(mobile) {
     padding: 50px 20px;
     background: #fff;
@@ -25,9 +25,10 @@
   }
   &-title {
     width: 330px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     @include breakpoint(mobile) {
       width: 175px;
+      margin-bottom: 20px;
     }
   }
   &-title-sub {
