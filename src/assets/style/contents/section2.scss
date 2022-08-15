@@ -1,0 +1,57 @@
+@import "../common/variables";
+@import "../common/mixin";
+
+.section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: $content-width;
+  background-size: cover;
+  &-title {
+    width: 670px;
+    @include breakpoint(tablet) {
+      margin-top: 40px;
+    }
+    @include breakpoint(mobile) {
+      margin-top: 40px;
+      width: 80%;
+    }
+  }
+  &-movie {
+    width: 960px;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  &-character {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+  }
+  &-right {
+    width: 670px;
+    @include breakpoint(tablet) {
+      width: 100%;
+      transform: translateY(-170px);
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      transform: translateY(-70px);
+    }
+  }
+  &-left {
+    width: 670px;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+}

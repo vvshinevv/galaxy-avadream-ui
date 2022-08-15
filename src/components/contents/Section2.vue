@@ -1,0 +1,31 @@
+<template>
+  <section class="section2">
+    <img :src="titleUrl" class="section2-title" />
+    <img :src="movieUrl" class="section2-movie" />
+    <div class="section2-character">
+      <img :src="imgLeft" class="section2-left" />
+      <img :src="imgRight" class="section2-right" />
+    </div>
+  </section>
+</template>
+
+<script>
+import { reactive, toRefs } from "vue";
+
+export default {
+  name: "Section2",
+  setup() {
+    const state = reactive({
+      titleUrl: require("@/assets/image/section2/img_title.png"),
+      movieUrl: require("@/assets/image/section2/img_movie.png"),
+      imgRight: require("@/assets/image/section2/img_right.png"),
+      imgLeft: require("@/assets/image/section2/img_left.png"),
+    });
+    return {
+      ...toRefs(state),
+    };
+  },
+};
+</script>
+
+<style scoped></style>

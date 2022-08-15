@@ -1,0 +1,81 @@
+@import "../common/variables";
+@import "../common/mixin";
+.section7 {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 50px 60px;
+  @include breakpoint(mobile) {
+    padding: 50px 20px;
+    background: #060d33;
+    .swiper {
+      overflow: visible;
+    }
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: $content-width;
+  }
+  &-title {
+    width: 330px;
+    margin-bottom: 20px;
+    @include breakpoint(mobile) {
+      width: 180px;
+    }
+  }
+  &-title-sub {
+    width: 166px;
+    margin-bottom: 5px;
+    @include breakpoint(mobile) {
+      width: 140px;
+    }
+  }
+  &-swiper {
+    max-width: $content-width;
+    margin: 0 auto;
+  }
+  .swiper-slide {
+    width: 70% !important;
+    @include breakpoint(mobile) {
+      width: 90% !important;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .swiper-button-prev {
+    &::after {
+      display: none;
+    }
+    top: 30px;
+    left: auto;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    background: url("@/assets/image/section4/img_prev.png") no-repeat center;
+    background-size: cover;
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+  .swiper-button-next {
+    &::after {
+      display: none;
+    }
+    top: 30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: url("@/assets/image/section4/img_next.png") no-repeat center;
+    background-size: cover;
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}

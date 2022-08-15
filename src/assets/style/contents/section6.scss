@@ -1,0 +1,109 @@
+@import "../common/variables";
+@import "../common/mixin";
+
+.section6 {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 50px 60px;
+  @include breakpoint(mobile) {
+    padding: 50px 20px;
+    background: #fff;
+    .swiper {
+      overflow: visible;
+    }
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: $content-width;
+  }
+  &-title {
+    width: 330px;
+    margin-bottom: 20px;
+    @include breakpoint(mobile) {
+      width: 175px;
+    }
+  }
+  &-title-sub {
+    width: 166px;
+    margin-bottom: 10px;
+    @include breakpoint(mobile) {
+      margin-bottom: 5px;
+      width: 140px;
+    }
+  }
+  &-swiper {
+    max-width: $content-width;
+    margin: 0 auto;
+    @include breakpoint(mobile) {
+      width: 100%;
+      padding-bottom: 50px;
+    }
+  }
+  .swiper-slide {
+    img {
+      width: 100%;
+    }
+  }
+  .pc-only {
+    width: 100%;
+  }
+  .mobile-only {
+    width: 100%;
+  }
+  .image-card-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    &-mo {
+      display: block;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .swiper-pagination {
+    transform: translateY(20px);
+    top: auto;
+    bottom: 0;
+    .swiper-pagination-progressbar-fill {
+      background: #000;
+    }
+  }
+  .swiper-button-prev {
+    &::after {
+      display: none;
+    }
+    top: 30px;
+    left: auto;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    background: url("@/assets/image/section4/img_prev.png") no-repeat center;
+    background-size: cover;
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+  .swiper-button-next {
+    &::after {
+      display: none;
+    }
+    top: 30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: url("@/assets/image/section4/img_next.png") no-repeat center;
+    background-size: cover;
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}

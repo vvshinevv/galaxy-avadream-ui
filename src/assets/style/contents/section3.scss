@@ -1,0 +1,129 @@
+@import "../common/variables";
+@import "../common/mixin";
+
+.section3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: $content-width;
+  height: 2200px;
+  @include breakpoint(mobile) {
+    overflow: hidden;
+    height: 1100px;
+    margin-top: -100px;
+  }
+  &::before {
+    content: "";
+    width: 2000px;
+    height: 2200px;
+    @include position(absolute, 0, 0, 0, 0);
+    background: url("@/assets/image/section3/bg_section3.jpg") repeat center;
+    clip-path: polygon(0 39%, 100% 0%, 100% 41%, 0% 100%);
+    @include breakpoint(mobile) {
+      width: 768px;
+      height: 1100px;
+      clip-path: polygon(0 29%, 100% 0%, 100% 71%, 0% 100%);
+    }
+  }
+  &-intro {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateY(-312px);
+    @include breakpoint(tablet) {
+      width: 100%;
+      transform: translateY(-80px);
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      transform: translateY(-12px);
+    }
+  }
+  &-intro-title {
+    width: 780px;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  &-intro-char {
+    margin-top: -410px;
+    width: 780px;
+    @include breakpoint(mobile) {
+      margin-top: -210px;
+      width: 90%;
+    }
+  }
+  &-intro-box {
+    display: flex;
+    width: 450px;
+    justify-content: space-between;
+    margin-top: -90px;
+    @include breakpoint(mobile) {
+      width: 100%;
+      margin-top: -40px;
+      justify-content: center;
+    }
+    img {
+      width: 100%;
+    }
+    .title {
+      width: 200px;
+      height: 50px;
+      margin-bottom: 20px;
+      @include breakpoint(mobile) {
+        width: 100px;
+        height: 25px;
+      }
+    }
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 20px;
+      @include breakpoint(mobile) {
+        align-items: flex-end;
+        margin: 0 10px;
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 20px;
+      @include breakpoint(mobile) {
+        align-items: flex-start;
+        margin: 0 10px;
+      }
+    }
+  }
+  &-panel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include breakpoint(mobile) {
+      margin-top: 30px;
+    }
+    &-title {
+      width: 320px;
+      @include breakpoint(mobile) {
+        width: 200px;
+      }
+    }
+    &-member {
+      margin-top: -100px;
+      width: 960px;
+      @include breakpoint(mobile) {
+        margin-top: -40px;
+        width: 100%;
+      }
+    }
+  }
+}
