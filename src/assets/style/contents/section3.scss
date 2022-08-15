@@ -10,6 +10,10 @@
   box-sizing: border-box;
   max-width: $content-width;
   height: 2000px;
+  @include breakpoint(tablet) {
+    overflow: hidden;
+    margin-top: -500px;
+  }
   @include breakpoint(mobile) {
     overflow: hidden;
     height: 1100px;
@@ -38,7 +42,7 @@
     transform: translateY(-180px);
     @include breakpoint(tablet) {
       width: 100%;
-      transform: translateY(-80px);
+      transform: translateY(-40px);
     }
     @include breakpoint(mobile) {
       width: 100%;

@@ -1,9 +1,6 @@
 //모바일 tablet에서만 노출됨
 .mobile-only {
     display: none !important;
-    @include breakpoint(tablet) {
-      display: block !important;
-    }
     @include breakpoint(mobile) {
         display: block !important;
     }
@@ -11,9 +8,6 @@
 //pc 에서만 노출됨
 .pc-only {
     display: block;
-  @include breakpoint(tablet) {
-    display: none;
-  }
     @include breakpoint(mobile) {
         display: none;
     }
@@ -36,15 +30,11 @@ body {
     max-width: $content-width;
     height: 320px;
     margin: 0 auto;
-    box-sizing: content-box;
     padding: 0 0 40px;
     background: #060d33 url("@/assets/image/bg_footer.png") no-repeat center top;
     background-size: contain;
     @include breakpoint(tablet) {
-      height: 160px;
-      margin: 0 auto;
-      background: #060d33 url("@/assets/image/bg_footer_mo.png") no-repeat center
-      top;
+      height: 200px;
       background-size: contain;
     }
     @include breakpoint(mobile) {

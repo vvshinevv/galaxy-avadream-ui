@@ -21,7 +21,7 @@
               v-for="(image, idx) of imgUrl"
               :key="'slide_image_' + idx"
           >
-            <div class="image-card-box" :style="back">
+            <div class="image-card-box">
               <img :src="image.src" class="image-card" />
             </div>
           </swiper-slide>

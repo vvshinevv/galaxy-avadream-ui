@@ -42,8 +42,8 @@
   &-right {
     width: 670px;
     @include breakpoint(tablet) {
-      width: 100%;
-      transform: translateY(-170px);
+      transform: translateY(-370px);
+      margin-left: auto;
     }
     @include breakpoint(mobile) {
       width: 100%;
@@ -52,6 +52,8 @@
   }
   &-left {
     width: 670px;
+    @include breakpoint(tablet) {
+    }
     @include breakpoint(mobile) {
       width: 100%;
     }
