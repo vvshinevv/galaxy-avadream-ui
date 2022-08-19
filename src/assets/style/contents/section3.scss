@@ -3,7 +3,6 @@
 
 .section3 {
   position: relative;
-
   &-box{
     display: flex;
     flex-direction: column;
@@ -11,26 +10,31 @@
     justify-content: center;
     box-sizing: border-box;
     max-width: $content-width;
-    height: 2000px;
+    height: 3000px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 250px auto 0;
     @include breakpoint(tablet) {
       overflow: hidden;
-      margin-top: -500px;
+      height: 2000px;
+      margin-top: 0;
     }
     @include breakpoint(mobile) {
       overflow: hidden;
       height: 1100px;
-      margin-top: -100px;
+      margin-top: 150px;
     }
   }
   &::before {
     content: "";
     width: 2000px;
-    height: 2000px;
+    height: 2400px;
     @include position(absolute, 0, 0, 0, 0);
     background: url("@/assets/image/section3/bg_section3.jpg") repeat center;
-    clip-path: polygon(0 43%, 100% 0%, 100% 57%, 0% 100%);
+    clip-path: polygon(0 36%, 100% 0%, 100% 64%, 0% 100%);
+    @include breakpoint(tablet) {
+      height: 2000px;
+      clip-path: polygon(0 43%, 100% 0%, 100% 57%, 0% 100%);
+    }
     @include breakpoint(mobile) {
       width: 768px;
       height: 1100px;
@@ -44,10 +48,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transform: translateY(-236px);
+    transform: translateY(-620px);
     @include breakpoint(tablet) {
       width: 100%;
-      transform: translateY(-40px);
+      transform: translateY(-20px);
     }
     @include breakpoint(mobile) {
       width: 100%;
@@ -55,14 +59,21 @@
     }
   }
   &-intro-title {
-    width: 780px;
+    width: 980px;
+    @include breakpoint(tablet) {
+      width: 780px;
+    }
     @include breakpoint(mobile) {
       width: 100%;
     }
   }
   &-intro-char {
-    margin-top: -410px;
-    width: 780px;
+    margin-top: -540px;
+    width: 980px;
+    @include breakpoint(tablet) {
+      margin-top: -410px;
+      width: 780px;
+    }
     @include breakpoint(mobile) {
       margin-top: -210px;
       width: 90%;
@@ -117,7 +128,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 140px;
+    @include breakpoint(tablet) {
+      margin-top: 160px;
+    }
     @include breakpoint(mobile) {
       margin-top: 30px;
     }
@@ -129,7 +143,10 @@
     }
     &-member {
       margin-top: -100px;
-      width: 960px;
+      width: 1360px;
+      @include breakpoint(tablet) {
+        width: 880px;
+      }
       @include breakpoint(mobile) {
         margin-top: -40px;
         width: 100%;

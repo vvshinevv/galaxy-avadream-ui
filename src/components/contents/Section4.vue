@@ -46,28 +46,28 @@ export default {
       titleUrl: require("@/assets/image/section4/img_title.png"),
       imgUrl: [
         {
-          src: require("@/assets/image/section4/img_card8.png"),
-        },
-        {
-          src: require("@/assets/image/section4/img_card7.png"),
-        },
-        {
-          src: require("@/assets/image/section4/img_card6.png"),
-        },
-        {
-          src: require("@/assets/image/section4/img_card5.png"),
-        },
-        {
-          src: require("@/assets/image/section4/img_card4.png"),
-        },
-        {
-          src: require("@/assets/image/section4/img_card3.png"),
+          src: require("@/assets/image/section4/img_card1.png"),
         },
         {
           src: require("@/assets/image/section4/img_card2.png"),
         },
         {
-          src: require("@/assets/image/section4/img_card1.png"),
+          src: require("@/assets/image/section4/img_card3.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_card4.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_card5.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_card6.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_card7.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_card8.png"),
         },
       ],
     });

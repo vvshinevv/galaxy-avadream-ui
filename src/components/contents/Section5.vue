@@ -17,15 +17,23 @@
               :key="'slide_image_' + idx"
           >
             <div class="image-card-box">
-              <img :src="image.src" class="image-card" />
+              <video controls  style="width:100%;height:250px;object-fit: contain;" v-if="idx===1">
+                <source :src="image.src"
+                        type="video/mp4">
+              </video>
+              <img :src="image.src" class="image-card" v-else/>
             </div>
           </swiper-slide>
         </swiper>
       </div>
       <div class="section5-swiper mobile-only">
         <ul class="section5-mo-list">
-          <li v-for="itemMo of imgUrlMo">
-            <img :src="itemMo.src" />
+          <li v-for="(itemMo,idx) of imgUrlMo">
+            <video controls  style="width:100%;object-fit: contain;" v-if="idx===1">
+              <source :src="itemMo.src"
+                      type="video/mp4">
+            </video>
+            <img :src="itemMo.src" v-else/>
           </li>
         </ul>
       </div>
@@ -53,24 +61,18 @@ export default {
       titleUrl2: require("@/assets/image/section5/img_title.png"),
       imgUrl: [
         {
-          src: require("@/assets/image/section5/img1.png"),
+          src: require("@/assets/image/section5/img1.jpg"),
         },
         {
-          src: require("@/assets/image/section5/img2.png"),
-        },
-        {
-          src: require("@/assets/image/section5/img2.png"),
+          src: require("@/assets/image/section5/img2.mp4"),
         },
       ],
       imgUrlMo: [
         {
-          src: require("@/assets/image/section5/img1_mo.png"),
+          src: require("@/assets/image/section5/img1.jpg"),
         },
         {
-          src: require("@/assets/image/section5/img2_mo.png"),
-        },
-        {
-          src: require("@/assets/image/section5/img3_mo.png"),
+          src: require("@/assets/image/section5/img2.mp4"),
         },
       ],
     });

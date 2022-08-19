@@ -8,19 +8,40 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 160px;
+  margin-top: -600px;
+  @include breakpoint(tablet) {
+    margin-top: -40px;
+  }
   @include breakpoint(mobile) {
+    margin-top: 0;
     padding-bottom: 40px;
   }
   &-title {
-    width: 312px;
+    width: 512px;
+    @include breakpoint(mobile) {
+      width: 240px;
+    }
   }
   &-swiper {
-    width: 960px;
-    margin-top: -50px;
+    width: 1320px;
+    margin-top: -72px;
+    @include breakpoint(tablet) {
+      width: 960px;
+      margin-top: -50px;
+    }
     @include breakpoint(mobile) {
-      margin: 50px 0;
+      margin: 0;
       width: 100%;
       margin-bottom: 100px;
+    }
+  }
+  .swiper{
+    padding-top:80px;
+    @include breakpoint(tablet) {
+      padding-top:40px;
+    }
+    @include breakpoint(mobile) {
+      padding-top: 0;
     }
   }
   .swiper-button-prev {
@@ -57,8 +78,12 @@
     &-box {
       display: flex;
       align-items: flex-end;
-      width: 244px;
-      height: 380px;
+      width: 344px;
+      height: 480px;
+      @include breakpoint(tablet) {
+        width: 244px;
+        height: 380px;
+      }
       @include breakpoint(mobile) {
         width: 100%;
         height: auto;

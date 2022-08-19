@@ -11,11 +11,22 @@
   max-width: $content-width;
   background-size: cover;
   margin: 0 auto;
+  video{
+    width: 1200px;
+    margin-top: 40px;
+    @include breakpoint(tablet) {
+      width: 860px;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
   &-title {
     margin-top: 80px;
-    width: 670px;
+    width: 900px;
     @include breakpoint(tablet) {
       margin-top: 40px;
+      width: 670px;
     }
     @include breakpoint(mobile) {
       margin-top: 40px;
@@ -29,30 +40,40 @@
     }
   }
   &-character {
+    position: relative;
+    margin-top: 200px;
     display: flex;
     justify-content: space-between;
     width: 100%;
     @include breakpoint(tablet) {
+      margin-top: 100px;
       flex-direction: column;
     }
     @include breakpoint(mobile) {
+      margin-top: 40px;
       flex-direction: column;
     }
   }
   &-right {
-    width: 670px;
+    width: 900px;
+
+    position: absolute;
+    right: 0;
+    bottom: -200px;
     @include breakpoint(tablet) {
-      transform: translateY(-370px);
+
+      width: 670px;
       margin-left: auto;
     }
     @include breakpoint(mobile) {
       width: 100%;
-      transform: translateY(-70px);
+      transform: translateY(60px);
     }
   }
   &-left {
-    width: 670px;
+    width: 900px;
     @include breakpoint(tablet) {
+      width: 670px;
     }
     @include breakpoint(mobile) {
       width: 100%;
