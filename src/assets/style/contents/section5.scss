@@ -50,6 +50,7 @@
     }
   }
   .swiper-slide {
+    overflow: hidden;
     width: 70% !important;
     img {
       width: 100%;
@@ -77,6 +78,20 @@
     height: 30px;
     background: url("@/assets/image/section4/img_next.png") no-repeat center;
     background-size: cover;
+  }
+  .video.image-card-box{
+    width: 100%;
+    padding-top: 34%;
+    video{
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform: translateY(-50%);
+      object-fit: cover;
+    }
   }
 }
 

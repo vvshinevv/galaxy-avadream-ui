@@ -16,12 +16,14 @@
               v-for="(image, idx) of imgUrl"
               :key="'slide_image_' + idx"
           >
-            <div class="image-card-box">
-              <video controls  style="width:100%;height:250px;object-fit: contain;" v-if="idx===1">
+            <div class="image-card-box video" v-if="idx===1">
+              <video controls  style="width:100%;">
                 <source :src="image.src"
                         type="video/mp4">
               </video>
-              <img :src="image.src" class="image-card" v-else/>
+            </div>
+            <div class="image-card-box" v-else>
+              <img :src="image.src"/>
             </div>
           </swiper-slide>
         </swiper>
@@ -29,7 +31,7 @@
       <div class="section5-swiper mobile-only">
         <ul class="section5-mo-list">
           <li v-for="(itemMo,idx) of imgUrlMo">
-            <video controls  style="width:100%;object-fit: contain;" v-if="idx===1">
+            <video controls  style="width:100%;object-fit: cover;" v-if="idx===1">
               <source :src="itemMo.src"
                       type="video/mp4">
             </video>
