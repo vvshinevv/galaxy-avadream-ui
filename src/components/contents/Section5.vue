@@ -16,10 +16,11 @@
               v-for="(image, idx) of imgUrl"
               :key="'slide_image_' + idx"
           >
-            <div class="image-card-box video" v-if="idx===1">
-              <video controls  style="width:100%;">
-                <source :src="image.src"
-                        type="video/mp4">
+            <div class="image-card-box video" v-if="image.type==='video'">
+
+              <video controls style="width:100%;">
+                <source :src="image.src[0]" type="video/webm">
+                <source :src="image.src[1]" type="video/mp4">
               </video>
             </div>
             <div class="image-card-box" v-else>
@@ -30,10 +31,10 @@
       </div>
       <div class="section5-swiper mobile-only">
         <ul class="section5-mo-list">
-          <li v-for="(itemMo,idx) of imgUrlMo">
-            <video controls  style="width:100%;object-fit: cover;" v-if="idx===1">
-              <source :src="itemMo.src"
-                      type="video/mp4">
+          <li v-for="(itemMo,idx) of imgUrlMo"  :key="'slide_' + idx">
+            <video controls  style="width:100%;object-fit: cover;" v-if="imgUrlMo.type==='video'">
+              <source :src="imgUrlMo.src[0]" type="video/webm">
+              <source :src="imgUrlMo.src[1]" type="video/mp4">
             </video>
             <img :src="itemMo.src" v-else/>
           </li>
@@ -61,20 +62,26 @@ export default {
     const state = reactive({
       titleUrl: require("@/assets/image/section5/img_title_sub.png"),
       titleUrl2: require("@/assets/image/section5/img_title.png"),
+      movieUrl: require("@/assets/image/section2/img_movie.webm"),
+      movieUrl2: require("@/assets/image/section2/img_movie.mp4"),
       imgUrl: [
         {
+          type:'img',
           src: require("@/assets/image/section5/img1.jpg"),
         },
         {
-          src: require("@/assets/image/section5/img2.mp4"),
+          type:'video',
+          src: [require("@/assets/image/section5/img2.webm"),require("@/assets/image/section5/img2.mp4")],
         },
       ],
       imgUrlMo: [
         {
+          type:'img',
           src: require("@/assets/image/section5/img1.jpg"),
         },
         {
-          src: require("@/assets/image/section5/img2.mp4"),
+          type:'video',
+          src: [require("@/assets/image/section5/img2.webm"),require("@/assets/image/section5/img2.mp4")],
         },
       ],
     });
