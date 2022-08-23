@@ -24,7 +24,7 @@ import Section6 from "@/components/contents/Section6";
 import Section7 from "@/components/contents/Section7";
 
 export default {
-  name: "Main.vue",
+  name: "Main",
   components: {
     Section7,
     Section6,

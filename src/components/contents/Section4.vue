@@ -11,6 +11,7 @@
           '768': {
             slidesPerView: 4,
             spaceBetween: 0,
+            allowTouchMove: false,
           },
         }"
       >

@@ -7,36 +7,51 @@
       </h1>
       <div class="section5-swiper pc-only">
         <swiper
-            :navigation="true"
-            :slidesPerView="'auto'"
-            :spaceBetween="30"
-            :modules="modules"
+          :navigation="true"
+          :slidesPerView="'auto'"
+          :spaceBetween="30"
+          :modules="modules"
+          :allowTouchMove="false"
         >
           <swiper-slide
-              v-for="(image, idx) of imgUrl"
-              :key="'slide_image_' + idx"
+            v-for="(image, idx) of imgUrl"
+            :key="'slide_image_' + idx"
           >
-            <div class="image-card-box video" v-if="image.type==='video'">
-
-              <video controls style="width:100%;">
-                <source :src="image.src[0]" type="video/webm">
-                <source :src="image.src[1]" type="video/mp4">
+            <div
+              class="image-card-box video section5-video"
+              v-if="image.type === 'video'"
+            >
+              <video
+                controls
+                style="width: 100%"
+                id="videoBox2"
+                @playing="updatePaused"
+                @pause="updatePaused"
+                @canplay="updatePaused"
+              >
+                <source :src="image.src[0]" type="video/webm" />
+                <source :src="image.src[1]" type="video/mp4" />
               </video>
+              <div class="icon" v-show="pausedBtn" @click="play"></div>
             </div>
             <div class="image-card-box" v-else>
-              <img :src="image.src"/>
+              <img :src="image.src" />
             </div>
           </swiper-slide>
         </swiper>
       </div>
       <div class="section5-swiper mobile-only">
         <ul class="section5-mo-list">
-          <li v-for="(itemMo,idx) of imgUrlMo"  :key="'slide_' + idx">
-            <video controls  style="width:100%;object-fit: cover;" v-if="imgUrlMo.type==='video'">
-              <source :src="imgUrlMo.src[0]" type="video/webm">
-              <source :src="imgUrlMo.src[1]" type="video/mp4">
+          <li v-for="(itemMo, idx) of imgUrlMo" :key="'slide_' + idx">
+            <video
+              controls
+              style="width: 100%; object-fit: cover"
+              v-if="itemMo.type === 'video'"
+            >
+              <source :src="itemMo.src[0]" type="video/webm" />
+              <source :src="itemMo.src[1]" type="video/mp4" />
             </video>
-            <img :src="itemMo.src" v-else/>
+            <img :src="itemMo.src" v-else />
           </li>
         </ul>
       </div>
@@ -46,7 +61,7 @@
 
 <script>
 import { Navigation } from "swiper";
-import { reactive, toRefs } from "vue";
+import { reactive, toRefs, watch } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
@@ -58,6 +73,28 @@ export default {
     Swiper,
     SwiperSlide,
   },
+  data() {
+    return {
+      videoElement: null,
+      pausedBtn: true,
+    };
+  },
+  computed: {},
+  methods: {
+    updatePaused(e) {
+      this.videoElement = e.target;
+      this.paused = e.target.paused;
+      this.pausedBtn = this.paused;
+    },
+    play() {
+      this.videoElement.play();
+      this.pausedBtn = false;
+    },
+    pause() {
+      this.videoElement.pause();
+      this.pausedBtn = true;
+    },
+  },
   setup() {
     const state = reactive({
       titleUrl: require("@/assets/image/section5/img_title_sub.png"),
@@ -66,28 +103,51 @@ export default {
       movieUrl2: require("@/assets/image/section2/img_movie.mp4"),
       imgUrl: [
         {
-          type:'img',
+          type: "img",
           src: require("@/assets/image/section5/img1.jpg"),
         },
         {
-          type:'video',
-          src: [require("@/assets/image/section5/img2.webm"),require("@/assets/image/section5/img2.mp4")],
+          type: "video",
+          src: [
+            require("@/assets/image/section5/img2.webm"),
+            require("@/assets/image/section5/img2.mp4"),
+          ],
         },
       ],
       imgUrlMo: [
         {
-          type:'img',
+          type: "img",
           src: require("@/assets/image/section5/img1.jpg"),
         },
         {
-          type:'video',
-          src: [require("@/assets/image/section5/img2.webm"),require("@/assets/image/section5/img2.mp4")],
+          type: "video",
+          src: [
+            require("@/assets/image/section5/img2.webm"),
+            require("@/assets/image/section5/img2.mp4"),
+          ],
         },
       ],
+      isActive: true,
+      isActiveMo: true,
     });
+    const videoClick = () => {
+      let videoElem = document.getElementById("videoBox2");
+
+      if (state.isActive) {
+        videoElem.play();
+        state.isActive = false;
+        return;
+      } else {
+        console.log("멈춤");
+        videoElem.pause();
+        state.isActive = true;
+        return;
+      }
+    };
     return {
       ...toRefs(state),
       modules: [Navigation],
+      videoClick,
     };
   },
 };

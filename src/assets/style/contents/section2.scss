@@ -79,4 +79,24 @@
       width: 100%;
     }
   }
+  &-video{
+    position: relative;
+    cursor: pointer;
+    &.on::before{
+      content:'';
+      width: 70px;
+      height: 70px;
+
+      @include position(absolute,50%,0,0,50%);
+      transform: translate(-50%,-50%);
+      background: url("@/assets/image/section2/img_play.svg") repeat center;
+      background-size: contain;
+      @include breakpoint(tablet) {
+        display: none;
+      }
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+  }
 }

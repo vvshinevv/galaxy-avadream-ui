@@ -93,6 +93,25 @@
       object-fit: cover;
     }
   }
+  &-video {
+    position: relative;
+    cursor: pointer;
+
+  }
+}
+.section5-video .icon{
+  width: 60px;
+  height: 60px;
+  @include position(absolute,50%,0,0,50%);
+  transform: translate(-50%,-50%);
+  background: url("@/assets/image/section2/img_play.svg") no-repeat center;
+  background-size: 60px 60px;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .section5-mo-list {
