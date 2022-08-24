@@ -25,6 +25,7 @@
                 controls
                 style="width: 100%"
                 id="videoBox2"
+                :poster="posterUrl"
                 @playing="updatePaused"
                 @pause="updatePaused"
                 @canplay="updatePaused"
@@ -47,6 +48,7 @@
               controls
               style="width: 100%; object-fit: cover"
               v-if="itemMo.type === 'video'"
+              :poster="posterUrl"
             >
               <source :src="itemMo.src[0]" type="video/webm" />
               <source :src="itemMo.src[1]" type="video/mp4" />
@@ -79,7 +81,6 @@ export default {
       pausedBtn: true,
     };
   },
-  computed: {},
   methods: {
     updatePaused(e) {
       this.videoElement = e.target;
@@ -99,8 +100,7 @@ export default {
     const state = reactive({
       titleUrl: require("@/assets/image/section5/img_title_sub.png"),
       titleUrl2: require("@/assets/image/section5/img_title.png"),
-      movieUrl: require("@/assets/image/section2/img_movie.webm"),
-      movieUrl2: require("@/assets/image/section2/img_movie.mp4"),
+        posterUrl: require("@/assets/image/section5/img1.jpg"),
       imgUrl: [
         {
           type: "img",
