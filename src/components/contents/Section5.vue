@@ -138,7 +138,6 @@ export default {
         state.isActive = false;
         return;
       } else {
-        console.log("멈춤");
         videoElem.pause();
         state.isActive = true;
         return;

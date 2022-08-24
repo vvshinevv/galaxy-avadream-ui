@@ -82,7 +82,7 @@
   &-video{
     position: relative;
     cursor: pointer;
-    &.on::before{
+    .icon{
       content:'';
       width: 70px;
       height: 70px;
