@@ -7,11 +7,12 @@
       </h1>
       <div class="section5-swiper pc-only">
         <swiper
-          :navigation="true"
-          :slidesPerView="'auto'"
+          :slidesPerView="2"
+          :centeredSlides="true"
           :spaceBetween="30"
           :modules="modules"
           :allowTouchMove="false"
+          :navigation="true"
         >
           <swiper-slide
             v-for="(image, idx) of imgUrl"
@@ -102,6 +103,10 @@ export default {
       titleUrl2: require("@/assets/image/section5/img_title.png"),
         posterUrl: require("@/assets/image/section5/img1.jpg"),
       imgUrl: [
+        {
+          type: "img",
+          src: require("@/assets/image/section5/img1.jpg"),
+        },
         {
           type: "img",
           src: require("@/assets/image/section5/img1.jpg"),
