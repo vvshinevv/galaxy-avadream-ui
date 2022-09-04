@@ -36,18 +36,7 @@
         }
     }
 }
-.logo-chosun{
 
-  img{
-    width: 100%;
-  }
-  @include breakpoint(tablet) {
-    width: 80px;
-  }
-  @include breakpoint(mobile) {
-    width: 60px;
-  }
-}
 //모바일에서만 노출되는 menu-layer
 .menu-layer {
   &-box {
