@@ -11,9 +11,15 @@
   max-width: $content-width;
   background-size: cover;
   margin: 0 auto;
-  video{
+  @include breakpoint(mobile) {
+    background: url("@/assets/image/section4/img_prev.png") no-repeat center;
+  }
+  &-video{
     width: 1200px;
     margin-top: 40px;
+    video{
+      width: 100%;
+    }
     @include breakpoint(tablet) {
       width: 860px;
     }
@@ -43,7 +49,7 @@
     position: relative;
     margin-top: 200px;
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     width: 100%;
     @include breakpoint(tablet) {
       margin-top: 100px;
@@ -53,32 +59,35 @@
       margin-top: 40px;
       flex-direction: column;
     }
-  }
-  &-right {
-    width: 900px;
-
-    position: absolute;
-    right: 0;
-    bottom: -200px;
-    @include breakpoint(tablet) {
-
-      width: 670px;
-      margin-left: auto;
-    }
-    @include breakpoint(mobile) {
-      width: 100%;
-      transform: translateY(60px);
-    }
-  }
-  &-left {
-    width: 900px;
-    @include breakpoint(tablet) {
-      width: 670px;
-    }
-    @include breakpoint(mobile) {
+    img{
       width: 100%;
     }
-  }
+  }//.section2-character
+  //&-right {
+  //  width: 900px;
+  //
+  //  position: absolute;
+  //  right: 0;
+  //  bottom: -200px;
+  //  @include breakpoint(tablet) {
+  //
+  //    width: 670px;
+  //    margin-left: auto;
+  //  }
+  //  @include breakpoint(mobile) {
+  //    width: 100%;
+  //    transform: translateY(60px);
+  //  }
+  //}
+  //&-left {
+  //  width: 900px;
+  //  @include breakpoint(tablet) {
+  //    width: 670px;
+  //  }
+  //  @include breakpoint(mobile) {
+  //    width: 100%;
+  //  }
+  //}
   &-video{
     position: relative;
     cursor: pointer;
@@ -89,7 +98,7 @@
 
       @include position(absolute,50%,0,0,50%);
       transform: translate(-50%,-50%);
-      background: url("@/assets/image/section2/img_play.svg") repeat center;
+      background: url("@/assets/image/section2/img_play.png") repeat center;
       background-size: contain;
       @include breakpoint(tablet) {
         display: none;

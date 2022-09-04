@@ -2,7 +2,7 @@
   <section class="section5">
     <div class="section5-box">
       <h1>
-        <img :src="titleUrl" class="section5-title-sub" />
+<!--        <img :src="titleUrl" class="section5-title-sub" />-->
         <img :src="titleUrl2" class="section5-title" />
       </h1>
       <div class="section5-swiper pc-only">

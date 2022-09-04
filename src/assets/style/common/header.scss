@@ -16,6 +16,7 @@
     padding: 20px 20px 0;
     background: transparent;
     @include breakpoint(mobile) {
+        justify-content: center;
         height: $header-height-mo;
         padding: 10px 10px 0;
     }
@@ -29,11 +30,9 @@
         img{
           width: 100%;
         }
-        @include breakpoint(tablet) {
-            width: 40px;
-        }
         @include breakpoint(mobile) {
-            width: 30px;
+          margin-top: 15px;
+            width: 46px;
         }
     }
 }
@@ -48,4 +47,41 @@
   @include breakpoint(mobile) {
     width: 60px;
   }
+}
+//모바일에서만 노출되는 menu-layer
+.menu-layer {
+  &-box {
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    background: #000;
+    @include position(fixed, 0, 0, 0, 0);
+    &.on {
+      display: flex;
+    }
+  } //.menu-layer-box
+  &-list {
+    padding: 100px 32px 0;
+  } //.menu-layer-list
+  &-item {
+    margin-bottom: 40px;
+  } //.menu-layer-item
+  &-link {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+  } //.menu-layer-link
+}
+
+.icon-menu {
+  display: none;
+  width: 40px;
+  height: 40px;
+  @include position(absolute, 10px, 18px, null, null);
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+.icon-close {
+  @include position(absolute, 20px, 20px, null, null);
 }

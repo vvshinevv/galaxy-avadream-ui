@@ -24,24 +24,23 @@ body {
 
 //footer
 .footer {
-  background: #060d33;
+  background: #f72362;
   flex: none;
   &-box{
     max-width: $content-width;
-    height: 320px;
+    height: 400px;
     margin: 0 auto;
     padding: 0 0 40px;
-    background: #060d33 url("@/assets/image/bg_footer.png") no-repeat center top;
+    background: #f72362 url("@/assets/image/bg_footer_v2.png") no-repeat center center;
     background-size: contain;
     @include breakpoint(tablet) {
       height: 200px;
       background-size: contain;
     }
     @include breakpoint(mobile) {
-      height: 160px;
+      height: 300px;
       margin: 0 auto;
-      background: #060d33 url("@/assets/image/bg_footer_mo.png") no-repeat center
-      top;
+      background: #f72362 url("@/assets/image/bg_footer_mo_v2.png") no-repeat center;
       background-size: contain;
     }
   }

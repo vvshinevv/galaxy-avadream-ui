@@ -10,35 +10,17 @@
     justify-content: center;
     box-sizing: border-box;
     max-width: $content-width;
-    height: 3000px;
     overflow: hidden;
-    margin: 250px auto 0;
+    margin: 0 auto 0;
     @include breakpoint(tablet) {
       overflow: hidden;
-      height: 2000px;
+      height: auto;
       margin-top: 0;
     }
     @include breakpoint(mobile) {
       overflow: hidden;
-      height: 1100px;
-      margin-top: 150px;
-    }
-  }
-  &::before {
-    content: "";
-    width: 2000px;
-    height: 2400px;
-    @include position(absolute, 0, 0, 0, 0);
-    background: url("@/assets/image/section3/bg_section3.jpg") repeat center;
-    clip-path: polygon(0 36%, 100% 0%, 100% 64%, 0% 100%);
-    @include breakpoint(tablet) {
-      height: 2000px;
-      clip-path: polygon(0 43%, 100% 0%, 100% 57%, 0% 100%);
-    }
-    @include breakpoint(mobile) {
-      width: 768px;
-      height: 1100px;
-      clip-path: polygon(0 29%, 100% 0%, 100% 71%, 0% 100%);
+      height: auto;
+      margin-top: 0;
     }
   }
   &-intro {
@@ -48,82 +30,44 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transform: translateY(-620px);
     @include breakpoint(tablet) {
       width: 100%;
-      transform: translateY(-20px);
-    }
-    @include breakpoint(mobile) {
-      width: 100%;
-      transform: translateY(-12px);
-    }
-  }
-  &-intro-title {
-    width: 980px;
-    @include breakpoint(tablet) {
-      width: 780px;
     }
     @include breakpoint(mobile) {
       width: 100%;
     }
-  }
-  &-intro-char {
-    margin-top: -540px;
-    width: 980px;
-    @include breakpoint(tablet) {
-      margin-top: -410px;
-      width: 780px;
-    }
-    @include breakpoint(mobile) {
-      margin-top: -210px;
-      width: 90%;
-    }
-  }
-  &-intro-box {
-    display: flex;
-    width: 450px;
-    justify-content: space-between;
-    margin-top: -90px;
-    @include breakpoint(mobile) {
-      width: 100%;
-      margin-top: -40px;
-      justify-content: center;
-    }
-    img {
-      width: 100%;
-    }
-    .title {
-      width: 200px;
-      height: 50px;
-      margin-bottom: 20px;
-      @include breakpoint(mobile) {
-        width: 100px;
-        height: 25px;
+    &-mc{
+      @include breakpoint(tablet) {
+        margin-top: 0;
+        width: 100%;
       }
-    }
-    .left {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0 20px;
       @include breakpoint(mobile) {
-        align-items: flex-end;
-        margin: 0 10px;
-      }
-    }
-    .right {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0 20px;
-      @include breakpoint(mobile) {
-        align-items: flex-start;
-        margin: 0 10px;
+        margin-top: 0;
+        width: 130%;
       }
     }
   }
+  //&-intro-title {
+  //  width: 980px;
+  //  @include breakpoint(tablet) {
+  //    width: 780px;
+  //  }
+  //  @include breakpoint(mobile) {
+  //    width: 100%;
+  //  }
+  //}
+  //&-intro-char {
+  //  margin-top: -540px;
+  //  width: 980px;
+  //  @include breakpoint(tablet) {
+  //    margin-top: -410px;
+  //    width: 780px;
+  //  }
+  //  @include breakpoint(mobile) {
+  //    margin-top: -210px;
+  //    width: 90%;
+  //  }
+  //}
   &-panel {
     display: flex;
     align-items: center;
@@ -135,20 +79,19 @@
     @include breakpoint(mobile) {
       margin-top: 30px;
     }
-    &-title {
-      width: 320px;
-      @include breakpoint(mobile) {
-        width: 200px;
-      }
-    }
+    //&-title {
+    //  width: 320px;
+    //  @include breakpoint(mobile) {
+    //    width: 200px;
+    //  }
+    //}
     &-member {
-      margin-top: -100px;
-      width: 1360px;
+      //margin-top: -100px;
+      //width: 1360px;
       @include breakpoint(tablet) {
-        width: 880px;
+        width: 100%;
       }
       @include breakpoint(mobile) {
-        margin-top: -40px;
         width: 100%;
       }
     }

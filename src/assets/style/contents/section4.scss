@@ -2,19 +2,26 @@
 @import "../common/mixin";
 
 .section4 {
+  overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding-bottom: 160px;
-  margin-top: -600px;
+  margin-top: 160px;
+  background: url("@/assets/image/section4/bg_section4.png") no-repeat center top;
+  height: 1075px;
   @include breakpoint(tablet) {
-    margin-top: -40px;
+    background: url("@/assets/image/section4/bg_section4.png") no-repeat center top;
+    height: auto;
+    background-size: cover;
   }
   @include breakpoint(mobile) {
-    margin-top: 0;
+    height: auto;
     padding-bottom: 40px;
+    background: url("@/assets/image/section4/bg_section4_mo.png") no-repeat center top;
+    background-size: cover;
   }
   &-title {
     width: 512px;
@@ -24,15 +31,15 @@
   }
   &-swiper {
     width: 1320px;
-    margin-top: -72px;
+    transform: translate(343px,140px);
     @include breakpoint(tablet) {
       width: 960px;
-      margin-top: -50px;
+      margin: 140px 0 120px;
     }
     @include breakpoint(mobile) {
-      margin: 0;
       width: 100%;
-      margin-bottom: 100px;
+      margin: 140px 0 120px;
+      transform: none;
     }
   }
   .swiper{
@@ -49,8 +56,8 @@
       display: none;
     }
     top: 30px;
-    left: auto;
-    right: 50px;
+    left: 0;
+    right: auto;
     width: 30px;
     height: 30px;
     background: url("@/assets/image/section4/img_prev.png") no-repeat center;
@@ -64,7 +71,8 @@
       display: none;
     }
     top: 30px;
-    right: 0;
+    left: 50px;
+    right: auto;
     width: 30px;
     height: 30px;
     background: url("@/assets/image/section4/img_next.png") no-repeat center;

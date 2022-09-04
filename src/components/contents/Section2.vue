@@ -12,8 +12,8 @@
         <div class="icon" v-show="pausedBtn" @click="play"></div>
     </div>
     <div class="section2-character">
-      <img :src="imgLeft" class="section2-left" />
-      <img :src="imgRight" class="section2-right" />
+      <img :src="imgPc" class="pc-only" />
+      <img :src="imgMo" class="mobile-only" />
     </div>
   </section>
 </template>
@@ -47,12 +47,12 @@ export default {
   setup() {
     const state = reactive({
       titleUrl: require("@/assets/image/section2/img_title.png"),
-      imgRight: require("@/assets/image/section2/img_right.png"),
-      imgLeft: require("@/assets/image/section2/img_left.png"),
+      imgPc: require("@/assets/image/section2/img_intro.png"),
+      imgMo: require("@/assets/image/section2/img_intro_mo.png"),
       movieUrl: require("@/assets/image/section2/img_movie.webm"),
       movieUrl2: require("@/assets/image/section2/img_movie.mp4"),
       isActive: true,
-        posterUrl: require("@/assets/image/section2/img_poster.png"),
+        posterUrl: require("@/assets/image/section2/img_poster_v2.png"),
     });
 
       const videoClick = () => {
