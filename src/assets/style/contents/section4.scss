@@ -9,18 +9,18 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 160px;
-  margin-top: 160px;
-  background: url("@/assets/image/section4/bg_section4.png") no-repeat center top;
+  margin-top: 150px;
+  background: url("@/assets/image/section4/bg_section4.png") repeat-x center top;
   height: 1075px;
   @include breakpoint(tablet) {
-    background: url("@/assets/image/section4/bg_section4.png") no-repeat center top;
+    background: url("@/assets/image/section4/bg_section4.png") repeat-x center top;
     height: auto;
     background-size: cover;
   }
   @include breakpoint(mobile) {
     height: auto;
     padding-bottom: 40px;
-    background: url("@/assets/image/section4/bg_section4_mo.png") no-repeat center top;
+    background: url("@/assets/image/section4/bg_section4_mo.png") repeat-x center top;
     background-size: cover;
   }
   &-title {

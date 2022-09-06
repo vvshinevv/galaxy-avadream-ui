@@ -49,7 +49,7 @@
               controls
               style="width: 100%; object-fit: cover"
               v-if="itemMo.type === 'video'"
-              :poster="posterUrl"
+              :poster="posterUrlMo"
             >
               <source :src="itemMo.src[0]" type="video/webm" />
               <source :src="itemMo.src[1]" type="video/mp4" />
@@ -101,36 +101,49 @@ export default {
     const state = reactive({
       titleUrl: require("@/assets/image/section5/img_title_sub.png"),
       titleUrl2: require("@/assets/image/section5/img_title.png"),
-        posterUrl: require("@/assets/image/section5/img1.jpg"),
+        posterUrl: require("@/assets/image/section5/img11.png"),
+        posterUrlMo: require("@/assets/image/section5/img11_mo.png"),
       imgUrl: [
         {
-          type: "img",
-          src: require("@/assets/image/section5/img1.jpg"),
+            type: "video",
+            src: [
+                require("@/assets/image/section5/img2.webm"),
+                require("@/assets/image/section5/img2.mp4"),
+            ],
         },
         {
+            type: "img",
+            src: require("@/assets/image/section5/img22.png"),
+        },
+      {
           type: "img",
-          src: require("@/assets/image/section5/img1.jpg"),
-        },
-        {
-          type: "video",
-          src: [
-            require("@/assets/image/section5/img2.webm"),
-            require("@/assets/image/section5/img2.mp4"),
-          ],
-        },
+          src: require("@/assets/image/section5/img33.png"),
+      },
+      {
+          type: "img",
+          src: require("@/assets/image/section5/img44.png"),
+      },
       ],
       imgUrlMo: [
         {
-          type: "img",
-          src: require("@/assets/image/section5/img1.jpg"),
-        },
-        {
           type: "video",
           src: [
             require("@/assets/image/section5/img2.webm"),
             require("@/assets/image/section5/img2.mp4"),
           ],
         },
+          {
+              type: "img",
+              src: require("@/assets/image/section5/img22_mo.png"),
+          },
+          {
+              type: "img",
+              src: require("@/assets/image/section5/img33_mo.png"),
+          },
+          {
+              type: "img",
+              src: require("@/assets/image/section5/img44_mo.png"),
+          },
       ],
       isActive: true,
       isActiveMo: true,

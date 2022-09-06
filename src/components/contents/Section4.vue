@@ -80,4 +80,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.swiper{
+    overflow:visible;
+}
+</style>

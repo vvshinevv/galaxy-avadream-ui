@@ -4,19 +4,20 @@
 .section5 {
   height: 1075px;
   padding: 0 60px;
-  margin-top: 160px;
-  background: url("@/assets/image/section5/bg_section5.png") no-repeat center top;
+  margin-top: 150px;
+  background: url("@/assets/image/section5/bg_section5.png") repeat-x center top;
+  background-size:  contain;
   @include breakpoint(tablet) {
     height: auto;
     margin-top: 200px;
-    background: url("@/assets/image/section5/bg_section5.png") no-repeat center top;
+    background: url("@/assets/image/section5/bg_section5.png") repeat-x center top;
     background-size:  cover;
   }
   @include breakpoint(mobile) {
     margin-top: 150px;
     height: auto;
     padding: 0 20px;
-    background: url("@/assets/image/section5/bg_section5_mo.png") no-repeat center top;
+    background: url("@/assets/image/section5/bg_section5_mo.png") repeat-x center top;
     background-size:  cover;
   }
   .swiper{
@@ -55,7 +56,13 @@
     margin: 0 auto;
   }
   &-title {
-    width: 330px;
+    width: 530px;
+    @include breakpoint(tablet) {
+      width: 330px;
+    }
+    @include breakpoint(mobile) {
+      width: 240px;
+    }
   }
   &-title-sub {
     width: 166px;
@@ -69,7 +76,7 @@
       margin: 70px auto 0;
     }
     @include breakpoint(mobile) {
-      margin-top: 40px;
+      margin-top: 54px;
       width: 100%;
     }
   }
@@ -139,7 +146,7 @@
 
 .section5-mo-list {
   li {
-    margin-bottom: 20px;
+    margin-bottom: 33px;
     img {
       width: 100%;
     }

@@ -73,6 +73,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 140px;
+    background: #070719;
     @include breakpoint(tablet) {
       margin-top: 160px;
     }
