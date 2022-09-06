@@ -2,35 +2,54 @@
   <section class="section3">
     <div class="section3-box">
       <div class="section3-intro">
-        <img :src="mcUrl" class="section3-intro-mc pc-only wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
-        <img :src="mcUrl2" class="section3-intro-mc mobile-only wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
-
+        <img
+          :src="mcUrl"
+          class="section3-intro-mc pc-only wow fadeInUp"
+          data-wow-duration="1s"
+          data-wow-delay="0.5s"
+        />
+        <img
+          :src="mcUrl2"
+          class="section3-intro-mc mobile-only wow fadeInUp"
+          data-wow-duration="1s"
+          data-wow-delay="0.5s"
+        />
       </div>
     </div>
   </section>
-    <div class="section3-panel">
-        <!--          <img :src="titleUrl2" class="section3-panel-title" />-->
-        <img :src="panelMember" class="section3-panel-member pc-only wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
-        <img :src="panelMemberMo" class="section3-panel-member mobile-only wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
-    </div>
+  <div class="section3-panel">
+    <!--          <img :src="titleUrl2" class="section3-panel-title" />-->
+    <img
+      :src="panelMember"
+      class="section3-panel-member pc-only wow fadeInUp"
+      data-wow-duration="1s"
+      data-wow-delay="0.5s"
+    />
+    <img
+      :src="panelMemberMo"
+      class="section3-panel-member mobile-only wow fadeInUp"
+      data-wow-duration="1s"
+      data-wow-delay="0.5s"
+    />
+  </div>
 </template>
 
 <script>
-import WOW from 'wowjs';
+import WOW from "wowjs";
 import { reactive, toRefs } from "vue";
 
 export default {
   name: "Section3",
-    mounted(){
-        let wow = new WOW.WOW({
-            boxClass: 'wow',
-            animateClass: 'animated',
-            offset: 0,
-            mobile: true,
-            live: true
-        });
-        wow.init();
-    },
+  mounted() {
+    let wow = new WOW.WOW({
+      boxClass: "wow",
+      animateClass: "animated",
+      offset: 0,
+      mobile: true,
+      live: true,
+    });
+    wow.init();
+  },
   setup() {
     const state = reactive({
       mcUrl: require("@/assets/image/section3/img_mc_v2.png"),
