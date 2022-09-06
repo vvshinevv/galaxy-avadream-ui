@@ -5,7 +5,7 @@
 <!--        <img :src="titleUrl" class="section5-title-sub" />-->
         <img :src="titleUrl2" class="section5-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
       </h1>
-      <div class="section5-swiper pc-only">
+      <div class="section5-swiper pc-only" >
         <swiper
           :slidesPerView="2"
           :centeredSlides="true"
@@ -14,10 +14,11 @@
           :navigation="true"
           :loop="true"
           :autoplay="{
-              delay: 2500,
-              disableOnInteraction: false,
+             delay: 2500,
+             disableOnInteraction: true,
         }"
           :modules="modules"
+          @swiper="onSwiper"
         >
           <swiper-slide
             v-for="(image, idx) of imgUrl"
@@ -66,7 +67,6 @@
     </div>
   </section>
 </template>
-
 <script>
 import { Navigation, Autoplay } from "swiper";
 import { reactive, toRefs, watch } from "vue";
@@ -176,13 +176,29 @@ export default {
         return;
       }
     };
+      const onSwiper = (swiper) => {
+          const slides = document.querySelectorAll('.swiper-slide');
+          slides.forEach(item => {
+              item.addEventListener('mouseover', event => {
+                  swiper.autoplay.stop();
+              })
+              item.addEventListener('mouseleave', event => {
+                  swiper.autoplay.start();
+              })
+          })
+      };
     return {
       ...toRefs(state),
       modules: [Navigation,Autoplay],
       videoClick,
+        onSwiper,
     };
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.swiper-slide{
+    cursor:pointer;
+}
+</style>
