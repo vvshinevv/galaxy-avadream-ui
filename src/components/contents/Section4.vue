@@ -36,12 +36,23 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import WOW from 'wowjs';
 export default {
   name: "Section4",
   components: {
     Swiper,
     SwiperSlide,
   },
+    mounted(){
+        let wow = new WOW.WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    },
   setup() {
     const state = reactive({
       titleUrl: require("@/assets/image/section4/img_title.png"),

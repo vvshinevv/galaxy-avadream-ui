@@ -3,7 +3,7 @@
     <div class="section5-box">
       <h1>
 <!--        <img :src="titleUrl" class="section5-title-sub" />-->
-        <img :src="titleUrl2" class="section5-title" />
+        <img :src="titleUrl2" class="section5-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
       </h1>
       <div class="section5-swiper pc-only">
         <swiper
@@ -71,7 +71,7 @@
 import { Navigation, Autoplay } from "swiper";
 import { reactive, toRefs, watch } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-
+import WOW from 'wowjs';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -81,6 +81,16 @@ export default {
     Swiper,
     SwiperSlide,
   },
+    mounted(){
+        let wow = new WOW.WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+    },
   data() {
     return {
       videoElement: null,

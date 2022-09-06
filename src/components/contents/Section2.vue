@@ -1,6 +1,6 @@
 <template>
   <section class="section2">
-    <img :src="titleUrl" class="section2-title" />
+    <img :src="titleUrl" class="section2-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" />
     <div class="section2-video">
       <video controls :poster="posterUrl" style="object-fit: contain" id="videoBox"
              @playing="updatePaused"
@@ -12,13 +12,14 @@
         <div class="icon" v-show="pausedBtn" @click="play"></div>
     </div>
     <div class="section2-character">
-      <img :src="imgPc" class="pc-only" />
-      <img :src="imgMo" class="mobile-only" />
+      <img :src="imgPc" class="pc-only wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
+      <img :src="imgMo" class="mobile-only wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
     </div>
   </section>
 </template>
 
 <script>
+import WOW from 'wowjs';
 import { reactive, toRefs } from "vue";
 
 export default {
@@ -28,6 +29,16 @@ export default {
             videoElement: null,
             pausedBtn: true,
         };
+    },
+    mounted(){
+        let wow = new WOW.WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
     },
     methods: {
         updatePaused(e) {
