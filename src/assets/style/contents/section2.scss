@@ -8,16 +8,16 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  max-width: $content-width;
+  //max-width: $content-width;
   background-size: cover;
   margin: 0 auto;
   @include breakpoint(mobile) {
     background: url("@/assets/image/section4/img_prev.png") no-repeat center;
   }
-  &-video{
+  &-video {
     width: 1200px;
     margin-top: 40px;
-    video{
+    video {
       width: 100%;
     }
     @include breakpoint(tablet) {
@@ -59,10 +59,10 @@
       margin-top: 40px;
       flex-direction: column;
     }
-    img{
+    img {
       width: 100%;
     }
-  }//.section2-character
+  } //.section2-character
   //&-right {
   //  width: 900px;
   //
@@ -88,16 +88,16 @@
   //    width: 100%;
   //  }
   //}
-  &-video{
+  &-video {
     position: relative;
     cursor: pointer;
-    .icon{
-      content:'';
+    .icon {
+      content: "";
       width: 70px;
       height: 70px;
 
-      @include position(absolute,50%,0,0,50%);
-      transform: translate(-50%,-50%);
+      @include position(absolute, 50%, 0, 0, 50%);
+      transform: translate(-50%, -50%);
       background: url("@/assets/image/section2/img_play.png") repeat center;
       background-size: contain;
       @include breakpoint(tablet) {
@@ -107,10 +107,10 @@
         display: none;
       }
     }
-    video[poster]{
+    video[poster] {
       /* 포스터 이미지의 크기를 비디오 영상에 꽉차도록 */
-      height:100%;
-      width:100%;
+      height: 100%;
+      width: 100%;
     }
   }
 }

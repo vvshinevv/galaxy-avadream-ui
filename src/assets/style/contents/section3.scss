@@ -3,13 +3,13 @@
 
 .section3 {
   position: relative;
-  &-box{
+  &-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    max-width: $content-width;
+    //max-width: $content-width;
     overflow: hidden;
     margin: 0 auto 0;
     @include breakpoint(tablet) {
@@ -36,7 +36,7 @@
     @include breakpoint(mobile) {
       width: 100%;
     }
-    &-mc{
+    &-mc {
       @include breakpoint(tablet) {
         margin-top: 0;
         width: 100%;
@@ -73,7 +73,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 140px;
-    background: #070719;
+    // background: #070719;
     @include breakpoint(tablet) {
       margin-top: 160px;
     }
@@ -89,6 +89,7 @@
     &-member {
       //margin-top: -100px;
       //width: 1360px;
+      width: 100%;
       @include breakpoint(tablet) {
         width: 100%;
       }
