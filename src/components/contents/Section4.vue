@@ -1,10 +1,10 @@
 <template>
   <section class="section4">
-<!--    <img :src="titleUrl" class="section4-title" />-->
+    <!--    <img :src="titleUrl" class="section4-title" />-->
     <div class="section4-swiper">
       <swiper
         :navigation="true"
-        :slides-per-view="2"
+        :slides-per-view="3"
         :spaceBetween="0"
         :modules="modules"
         :breakpoints="{

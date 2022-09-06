@@ -7,7 +7,7 @@
     <a href="#" class="pc-only">
       <img :src="logoUrl2" class="logo-chosun" />
     </a>
-    <MenuLayer/>
+    <MenuLayer />
   </header>
 </template>
 
@@ -16,7 +16,7 @@ import { reactive, toRefs } from "vue";
 import MenuLayer from "@/components/MenuLayer";
 export default {
   name: "Header",
-  components: {MenuLayer},
+  components: { MenuLayer },
   setup() {
     const state = reactive({
       logoUrl: require("@/assets/image/logo.png"),

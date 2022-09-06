@@ -1,47 +1,81 @@
 //모바일 tablet에서만 노출됨
 .mobile-only {
-    display: none !important;
-    @include breakpoint(mobile) {
-        display: block !important;
-    }
+  display: none !important;
+  @include breakpoint(mobile) {
+    display: block !important;
+  }
 }
 //pc 에서만 노출됨
 .pc-only {
-    display: block;
-    @include breakpoint(mobile) {
-        display: none;
-    }
+  display: block;
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 body {
-    background: #000;
+  background: #000;
 }
 
-.ava-wrap{
+.ava-wrap {
   overflow: hidden;
-  background: rgb(244,38,98);
-  background: linear-gradient(305deg, rgba(244,38,98,1) 0%, rgba(239,70,170,1) 40%, rgba(63,189,248,1) 100%);
+  background: rgb(244, 38, 98);
+  background: linear-gradient(
+    305deg,
+    rgba(244, 38, 98, 1) 0%,
+    rgba(239, 70, 170, 1) 40%,
+    rgba(63, 189, 248, 1) 100%
+  );
 }
 
 //footer
 .footer {
   background: #f72362;
-  flex: none;
-  &-box{
-    max-width: $content-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &-box {
+    // max-width: $content-width;
+    // height: 150px;
+    // margin: 0 30px;
+    // padding: 0 0 40px;
+    max-width: 1260px;
+    display: flex;
     height: 400px;
     margin: 0 auto;
-    padding: 0 0 40px;
-    background: #f72362 url("@/assets/image/bg_footer_v2.png") no-repeat center center;
+    width: 100%;
+    background: #f72362 url("@/assets/image/bg_footer_v3.png") no-repeat center
+      center;
     background-size: contain;
     @include breakpoint(tablet) {
-      height: 200px;
-      background-size: contain;
+      max-width: 960px;
+      height: 300px;
     }
     @include breakpoint(mobile) {
-      height: 300px;
-      margin: 0 auto;
-      background: #f72362 url("@/assets/image/bg_footer_mo_v2.png") no-repeat center;
+      max-width: 640px;
+      height: 250px;
+      background: #f72362 url("@/assets/image/bg_footer_mo_v3.png") no-repeat
+        center center;
       background-size: contain;
     }
   }
+  // &-bottom {
+  //   display: flex;
+  //   max-width: 640px;
+  //   height: 150px;
+  //   // margin: 0 30px;
+  //   width: 100%;
+  //   background: #f72362 url("@/assets/image/bg_footer_bottom.png") no-repeat
+  //     center center;
+  //   background-size: contain;
+  //   background-position: center center;
+  //   @include breakpoint(tablet) {
+  //     height: 100px;
+  //     max-width: 480px;
+  //   }
+  //   @include breakpoint(mobile) {
+  //     height: 100px;
+  //     margin: 0 120px;
+  //   }
+  // }
 }

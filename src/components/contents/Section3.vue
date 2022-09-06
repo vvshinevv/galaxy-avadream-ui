@@ -6,7 +6,7 @@
         <img :src="mcUrl2" class="section3-intro-mc mobile-only" />
 
         <div class="section3-panel">
-<!--          <img :src="titleUrl2" class="section3-panel-title" />-->
+          <!--          <img :src="titleUrl2" class="section3-panel-title" />-->
           <img :src="panelMember" class="section3-panel-member pc-only" />
           <img :src="panelMemberMo" class="section3-panel-member mobile-only" />
         </div>

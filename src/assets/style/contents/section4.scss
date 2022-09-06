@@ -10,17 +10,23 @@
   flex-direction: column;
   padding-bottom: 160px;
   margin-top: 160px;
-  background: url("@/assets/image/section4/bg_section4.png") no-repeat center top;
-  height: 1075px;
+  background: url("@/assets/image/section4/bg_section4.png") no-repeat center
+    top;
+  //height: 1075px;
+  height: 56vw;
+  background-size: cover;
+
   @include breakpoint(tablet) {
-    background: url("@/assets/image/section4/bg_section4.png") no-repeat center top;
-    height: auto;
-    background-size: cover;
+    //background: url("@/assets/image/section4/bg_section4.png") no-repeat center top;
+    // height: auto;
+    //background-size: cover;
   }
   @include breakpoint(mobile) {
-    height: auto;
+    // height: auto;
+    height: 60vw;
     padding-bottom: 40px;
-    background: url("@/assets/image/section4/bg_section4_mo.png") no-repeat center top;
+    background: url("@/assets/image/section4/bg_section4_mo.png") no-repeat
+      center top;
     background-size: cover;
   }
   &-title {
@@ -30,22 +36,29 @@
     }
   }
   &-swiper {
-    width: 1320px;
-    transform: translate(343px,140px);
+    //max-width: 1320px;
+    position: absolute;
+    bottom: 240px;
+    width: 80%;
+    transform: translate(343px, 140px);
     @include breakpoint(tablet) {
-      width: 960px;
+      // min-width: 960px;
       margin: 140px 0 120px;
+      bottom: 50px;
     }
     @include breakpoint(mobile) {
-      width: 100%;
-      margin: 140px 0 120px;
-      transform: none;
+      width: 78%;
+      bottom: 12vh;
+      transform: translate(0px, 138px);
+      // width: 100%;
+      // margin: 140px 0 120px;
+      // transform: none;
     }
   }
-  .swiper{
-    padding-top:80px;
+  .swiper {
+    padding-top: 80px;
     @include breakpoint(tablet) {
-      padding-top:40px;
+      padding-top: 40px;
     }
     @include breakpoint(mobile) {
       padding-top: 0;
@@ -56,7 +69,7 @@
       display: none;
     }
     top: 30px;
-    left: 0;
+    left: 20px;
     right: auto;
     width: 30px;
     height: 30px;
@@ -71,7 +84,7 @@
       display: none;
     }
     top: 30px;
-    left: 50px;
+    left: 70px;
     right: auto;
     width: 30px;
     height: 30px;
@@ -86,15 +99,18 @@
     &-box {
       display: flex;
       align-items: flex-end;
-      width: 344px;
-      height: 480px;
+      width: 100%;
+      // width: 344px;
+      // height: 480px;
       @include breakpoint(tablet) {
-        width: 244px;
-        height: 380px;
+        width: 100%;
+        // width: 244px;
+        // height: 380px;
       }
       @include breakpoint(mobile) {
         width: 100%;
-        height: auto;
+        // width: 100%;
+        // height: auto;
       }
       img {
         width: 100%;

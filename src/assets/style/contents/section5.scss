@@ -2,24 +2,49 @@
 @import "../common/mixin";
 
 .section5 {
-  height: 1075px;
-  padding: 0 60px;
+  //height: 1075px;
+  // padding: 0 60px;
+  // margin-top: 160px;
+  // background: url("@/assets/image/section5/bg_section5.png") no-repeat center
+  //   top;
+  // width: 100%;
+  // height: auto;
+  // background-size: cover;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 160px;
   margin-top: 160px;
-  background: url("@/assets/image/section5/bg_section5.png") no-repeat center top;
+  background: url("@/assets/image/section5/bg_section5.png") no-repeat center
+    top;
+  //height: 1075px;
+  height: 56vw;
+  background-size: cover;
+
   @include breakpoint(tablet) {
-    height: auto;
-    margin-top: 200px;
-    background: url("@/assets/image/section5/bg_section5.png") no-repeat center top;
-    background-size:  cover;
+    // height: auto;
+    // margin-top: 200px;
+    // background: url("@/assets/image/section5/bg_section5.png") no-repeat center
+    //   top;
+    // background-size: cover;
   }
   @include breakpoint(mobile) {
-    margin-top: 150px;
-    height: auto;
-    padding: 0 20px;
-    background: url("@/assets/image/section5/bg_section5_mo.png") no-repeat center top;
-    background-size:  cover;
+    // margin-top: 150px;
+    // height: auto;
+    // padding: 0 20px;
+    // background: url("@/assets/image/section5/bg_section5_mo.png") no-repeat
+    //   center top;
+    // background-size: cover;
+    height: 80vw;
+    padding-bottom: 40px;
+    background: url("@/assets/image/section5/bg_section5_mo.png") no-repeat
+      center top;
+    background-size: cover;
   }
-  .swiper{
+  .swiper {
     padding-top: 80px;
     margin-top: -66px;
     overflow: visible !important;
@@ -28,7 +53,7 @@
       margin-top: 0;
     }
   }
-  &-box{
+  &-box {
     margin: 0 auto;
     padding: 250px 0 80px;
     position: relative;
@@ -36,7 +61,8 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    max-width: $content-width;
+    //max-width: $content-width;
+    width: 100%;
     @include breakpoint(mobile) {
       padding: 120px 0 100px;
       margin-top: 0;
@@ -47,6 +73,7 @@
     }
   }
   h1 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -62,20 +89,25 @@
   }
   &-swiper {
     //max-width: $content-width;
+    //max-width: 1440px;
+    position: absolute;
+    bottom: 100px;
     width: 100%;
-    margin: 140px auto 0;
+    //margin: 140px auto 0;
     @include breakpoint(tablet) {
-      width: 100%;
+      width: 132vw;
       margin: 70px auto 0;
+      bottom: 50px;
     }
     @include breakpoint(mobile) {
       margin-top: 40px;
-      width: 100%;
+      width: 136vw;
+      bottom: 8vw;
     }
   }
   .swiper-slide {
     overflow: hidden;
-    img{
+    img {
       object-fit: contain;
       width: 100%;
     }
@@ -86,27 +118,33 @@
     }
     top: 30px;
     left: auto;
-    right: 50px;
+    right: 100px;
     width: 30px;
     height: 30px;
     background: url("@/assets/image/section4/img_prev.png") no-repeat center;
     background-size: cover;
+    @include breakpoint(tablet) {
+      right: 300px;
+    }
   }
   .swiper-button-next {
     &::after {
       display: none;
     }
     top: 30px;
-    right: 0;
+    right: 50px;
     width: 30px;
     height: 30px;
     background: url("@/assets/image/section4/img_next.png") no-repeat center;
     background-size: cover;
+    @include breakpoint(tablet) {
+      right: 250px;
+    }
   }
-  .video.image-card-box{
+  .video.image-card-box {
     width: 100%;
     padding-top: 34%;
-    video{
+    video {
       width: 100%;
       position: absolute;
       top: 50%;
@@ -122,11 +160,11 @@
     cursor: pointer;
   }
 }
-.section5-video .icon{
+.section5-video .icon {
   width: 60px;
   height: 60px;
-  @include position(absolute,50%,0,0,50%);
-  transform: translate(-50%,-50%);
+  @include position(absolute, 50%, 0, 0, 50%);
+  transform: translate(-50%, -50%);
   background: url("@/assets/image/section2/img_play.png") no-repeat center;
   background-size: 60px 60px;
   @include breakpoint(tablet) {
@@ -145,8 +183,8 @@
     }
   }
 }
-video[poster]{
+video[poster] {
   /* 포스터 이미지의 크기를 비디오 영상에 꽉차도록 */
-  height:100%;
-  width:100%;
+  height: 100%;
+  width: 100%;
 }

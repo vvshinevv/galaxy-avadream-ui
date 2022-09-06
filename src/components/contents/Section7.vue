@@ -7,19 +7,19 @@
       </h1>
       <div class="section7-swiper">
         <swiper
-            :navigation="true"
-            :slidesPerView="'auto'"
-            :spaceBetween="30"
-            :modules="modules"
-            :breakpoints="{
-          '320': {
-            spaceBetween: 20,
-          },
-        }"
+          :navigation="true"
+          :slidesPerView="'auto'"
+          :spaceBetween="30"
+          :modules="modules"
+          :breakpoints="{
+            '320': {
+              spaceBetween: 20,
+            },
+          }"
         >
           <swiper-slide
-              v-for="(image, idx) of imgUrl"
-              :key="'slide_image_' + idx"
+            v-for="(image, idx) of imgUrl"
+            :key="'slide_image_' + idx"
           >
             <div class="image-card-box">
               <img :src="image.src" class="image-card" />

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-unused-components -->
 <template>
   <main class="ava-wrap">
     <Header />
@@ -6,8 +7,8 @@
     <Section3></Section3>
     <Section5></Section5>
     <Section4></Section4>
-<!--    <Section6></Section6>-->
-<!--    <Section7></Section7>-->
+    <!--    <Section6></Section6>-->
+    <!--    <Section7></Section7>-->
     <Footer />
   </main>
 </template>
