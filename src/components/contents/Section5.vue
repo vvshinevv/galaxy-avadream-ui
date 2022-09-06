@@ -10,9 +10,14 @@
           :slidesPerView="2"
           :centeredSlides="true"
           :spaceBetween="30"
-          :modules="modules"
           :allowTouchMove="false"
           :navigation="true"
+          :loop="true"
+          :autoplay="{
+              delay: 2500,
+              disableOnInteraction: false,
+        }"
+          :modules="modules"
         >
           <swiper-slide
             v-for="(image, idx) of imgUrl"
@@ -63,7 +68,7 @@
 </template>
 
 <script>
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 import { reactive, toRefs, watch } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
@@ -163,7 +168,7 @@ export default {
     };
     return {
       ...toRefs(state),
-      modules: [Navigation],
+      modules: [Navigation,Autoplay],
       videoClick,
     };
   },
