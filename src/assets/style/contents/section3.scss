@@ -24,17 +24,23 @@
     }
   }
   &-intro {
+    margin-top: 277px;
     position: relative;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    max-width: 1496px;
     @include breakpoint(tablet) {
+      margin-top: 177px;
       width: 100%;
+      max-width: none;
     }
     @include breakpoint(mobile) {
+      margin-top: 100px;
       width: 100%;
+      max-width: none;
     }
     &-mc {
       @include breakpoint(tablet) {
@@ -73,12 +79,11 @@
     align-items: center;
     flex-direction: column;
     margin-top: 140px;
-    // background: #070719;
     @include breakpoint(tablet) {
       margin-top: 160px;
     }
     @include breakpoint(mobile) {
-      margin-top: 30px;
+      margin-top: 90px;
     }
     //&-title {
     //  width: 320px;
@@ -88,8 +93,7 @@
     //}
     &-member {
       //margin-top: -100px;
-      //width: 1360px;
-      width: 100%;
+      max-width: 1459px;
       @include breakpoint(tablet) {
         width: 100%;
       }

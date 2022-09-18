@@ -12,8 +12,8 @@
         <div class="icon" v-show="pausedBtn" @click="play"></div>
     </div>
     <div class="section2-character">
-      <img :src="imgPc" class="pc-only wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
-      <img :src="imgMo" class="mobile-only wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
+      <img :src="imgCard" class="card wow bounceInLeft center" data-wow-duration="1s" data-wow-delay="0.5s"/>
+      <img :src="imgCard2" class="card2 wow bounceInRight center" data-wow-duration="1s" data-wow-delay="0.5s"/>
     </div>
   </section>
 </template>
@@ -57,13 +57,13 @@ export default {
     },
   setup() {
     const state = reactive({
-      titleUrl: require("@/assets/image/section2/img_title.png"),
-      imgPc: require("@/assets/image/section2/img_intro.png"),
-      imgMo: require("@/assets/image/section2/img_intro_mo.png"),
+      titleUrl: require("@/assets/image/section2/img_title_v2.png"),
+      imgCard: require("@/assets/image/section2/img_intro_card.png"),
+      imgCard2: require("@/assets/image/section2/img_intro_card2.png"),
       movieUrl: require("@/assets/image/section2/img_movie.webm"),
       movieUrl2: require("@/assets/image/section2/img_movie.mp4"),
       isActive: true,
-        posterUrl: require("@/assets/image/section2/img_poster_v2.png"),
+        posterUrl: require("@/assets/image/section2/img_poster_v3.png"),
     });
 
       const videoClick = () => {

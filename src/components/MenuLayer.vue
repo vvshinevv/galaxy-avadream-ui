@@ -1,22 +1,16 @@
 <template>
   <div class="menu-layer mobile-only">
     <button type="button" class="icon-menu" @click="showModal = true">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        data-v-05a98cf2=""
-      >
-        <path
-          d="M3 12h18M3 6h18M3 18h18"
-          stroke="#fff"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></path>
-      </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+            <path data-name="사각형 121" style="fill:none" d="M0 0h80v80H0z"/>
+            <g data-name="그룹 308">
+                <path data-name="선 4" transform="translate(15 25)" style="stroke:#fff;fill:none" d="M0 0h50"/>
+                <path data-name="선 5" transform="translate(15 40)" style="stroke:#707070;fill:none" d="M0 0h50"/>
+                <path data-name="선 6" transform="translate(15 40)" style="stroke:#fff;fill:none" d="M0 0h50"/>
+                <path data-name="선 7" transform="translate(15 55)" style="stroke:#fff;fill:none" d="M0 0h50"/>
+            </g>
+        </svg>
+
     </button>
     <!--[D] on 클래스 추가시 확성화 -->
     <div class="menu-layer-box" :class="{ on: showModal === true }">

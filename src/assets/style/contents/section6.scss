@@ -82,6 +82,7 @@
     }
   }
   .swiper-button-prev {
+    display: none;
     &::after {
       display: none;
     }
@@ -90,13 +91,14 @@
     right: 50px;
     width: 30px;
     height: 30px;
-    background: url("@/assets/image/section4/img_prev.png") no-repeat center;
+    //background: url("@/assets/image/section4/img_prev.png") no-repeat center;
     background-size: cover;
     @include breakpoint(mobile) {
       display: none;
     }
   }
   .swiper-button-next {
+    display: none;
     &::after {
       display: none;
     }
@@ -104,7 +106,7 @@
     right: 0;
     width: 30px;
     height: 30px;
-    background: url("@/assets/image/section4/img_next.png") no-repeat center;
+    //background: url("@/assets/image/section4/img_next.png") no-repeat center;
     background-size: cover;
     @include breakpoint(mobile) {
       display: none;

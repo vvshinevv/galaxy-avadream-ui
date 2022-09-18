@@ -9,7 +9,6 @@
   z-index: 100;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   box-sizing: border-box;
   max-width: $content-max-width;
   height: $header-height;
@@ -19,10 +18,13 @@
   @include breakpoint(mobile) {
     justify-content: center;
     height: $header-height-mo;
-    padding: 10px 10px 0;
+    padding: 0;
   }
   &-logo {
-    width: 90px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 123px;
 
     svg {
       width: 100%;
@@ -32,9 +34,12 @@
       width: 100%;
     }
     @include breakpoint(mobile) {
-      margin-top: 15px;
-      width: 46px;
+      margin-top: 55px;
+      width: 51px;
     }
+  }
+  img {
+    width: 100%;
   }
 }
 
@@ -67,19 +72,16 @@
   display: none;
   width: 40px;
   height: 40px;
-  @include position(absolute, 10px, 18px, null, null);
+  @include position(absolute, 20px, 20px, null, null);
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
   @include breakpoint(mobile) {
     display: block;
   }
 }
 .icon-close {
   @include position(absolute, 20px, 20px, null, null);
-}
-
-.logo-world {
-  display: none;
-}
-
-.logo-chosun {
-  display: none;
 }

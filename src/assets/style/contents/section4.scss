@@ -9,49 +9,78 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 160px;
-  margin-top: 150px;
-  background: url("@/assets/image/section4/bg_section4.png") repeat-x center top;
-  height: 1075px;
+  margin-top: 348px;
+  background: url("@/assets/image/section4/bg_section4_v2.png") repeat-x center
+    top;
+  height: 840px;
+  box-sizing: border-box;
   @include breakpoint(tablet) {
-    background: url("@/assets/image/section4/bg_section4.png") repeat-x center top;
-    height: auto;
+    height: 600px;
+    background: url("@/assets/image/section4/bg_section4_v2.png") repeat-x
+      center top;
     background-size: cover;
   }
   @include breakpoint(mobile) {
+    flex-direction: initial;
+    align-items: flex-start;
+    padding-top: 34%;
     height: auto;
+    margin-top: 174px;
     padding-bottom: 40px;
-    background: url("@/assets/image/section4/bg_section4_mo.png") repeat-x center top;
+    background: url("@/assets/image/section4/bg_section4_mo_v2.png") repeat-x
+      center top;
     background-size: cover;
   }
   &-title {
-    width: 512px;
+    transform: translateY(-50px);
+    width: 344px;
+    @include breakpoint(tablet) {
+      transform: translateY(45px);
+      width: 280px;
+    }
+    @include breakpoint(mobile) {
+      width: 240px;
+    }
+  }
+  &-title2 {
+    width: 440px;
+    position: absolute;
+    top: 377px;
+    left: 50%;
+    margin-left: -810px;
+    @include breakpoint(tablet) {
+      width: 200px;
+      margin-left: -362px;
+      top: 300px;
+    }
     @include breakpoint(mobile) {
       width: 240px;
     }
   }
   &-swiper {
     width: 1320px;
-    transform: translate(343px,140px);
+    transform: translate(343px, 60px);
     @include breakpoint(tablet) {
       width: 960px;
-      margin: 140px 0 120px;
+      margin: 40px 0;
     }
     @include breakpoint(mobile) {
       width: 100%;
-      margin: 140px 0 120px;
+      margin: 0 0 54px;
       transform: none;
     }
   }
-  .swiper{
-    padding-top:80px;
+  .swiper {
+    //padding-top:80px;
     @include breakpoint(tablet) {
-      padding-top:40px;
+      //padding-top:40px;
     }
     @include breakpoint(mobile) {
-      padding-top: 0;
+      //padding-top: 0;
     }
   }
   .swiper-button-prev {
+    display: none;
     &::after {
       display: none;
     }
@@ -60,13 +89,14 @@
     right: auto;
     width: 30px;
     height: 30px;
-    background: url("@/assets/image/section4/img_prev.png") no-repeat center;
+    //background: url("@/assets/image/section4/img_prev.png") no-repeat center;
     background-size: cover;
     @include breakpoint(mobile) {
       display: none;
     }
   }
   .swiper-button-next {
+    display: none;
     &::after {
       display: none;
     }
@@ -75,7 +105,7 @@
     right: auto;
     width: 30px;
     height: 30px;
-    background: url("@/assets/image/section4/img_next.png") no-repeat center;
+    //background: url("@/assets/image/section4/img_next.png") no-repeat center;
     background-size: cover;
     @include breakpoint(mobile) {
       display: none;
@@ -99,6 +129,18 @@
       img {
         width: 100%;
       }
+    }
+  }
+}
+
+.mobile-card {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 33.333%;
+    padding: 0 15px 20px;
+    img {
+      width: 100%;
     }
   }
 }

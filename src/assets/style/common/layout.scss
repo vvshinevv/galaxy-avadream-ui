@@ -18,37 +18,133 @@ body {
 
 .ava-wrap {
   overflow: hidden;
-  background: rgb(244, 38, 98);
-  background: linear-gradient(
-    305deg,
-    rgba(244, 38, 98, 1) 0%,
-    rgba(239, 70, 170, 1) 40%,
-    rgba(63, 189, 248, 1) 100%
-  );
+  background: rgb(244,38,98);
+  background: linear-gradient(0deg, rgba(242, 70, 172, 1) 0%, rgba(30, 51, 158, 1) 40%, rgba(18, 22, 63, 1) 100%);
 }
-
 //footer
 .footer {
-  background: #f72362;
-  flex: none;
-  &-box {
-    max-width: $content-width;
-    height: 400px;
-    margin: 0 auto;
-    padding: 0 0 40px;
-    background: #f72362 url("@/assets/image/bg_footer_v3.png") no-repeat center
-      center;
-    background-size: contain;
-    @include breakpoint(tablet) {
-      height: 200px;
-      background-size: contain;
+    flex: none;
+    &-box{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        box-sizing:border-box;
+        max-width: 1668px;
+        height: 550px;
+        margin: 0 auto;
+        padding: 219px 0 40px;
+        @include breakpoint(tablet) {
+            padding-top: 125px;
+            height: auto;
+            background-size: contain;
+        }
+        @include breakpoint(mobile) {
+            padding-top: 61px;
+            height: auto;
+            margin: 0 auto;
+        }
+
     }
-    @include breakpoint(mobile) {
-      height: 300px;
-      margin: 0 auto;
-      background: #f72362 url("@/assets/image/bg_footer_mo_v3.png") no-repeat
-        center;
-      background-size: contain;
+    &-box-link{
+        display: flex;
+        justify-content: center;
+
+        @include breakpoint(tablet) {
+            img{
+                width: auto;
+                height: 24px;
+            }
+        }
+        @include breakpoint(mobile) {
+            img{
+                width: auto;
+                height: 12px;
+            }
+        }
+        a+a{
+            margin-left: 34px;
+        }
     }
-  }
+    &-link-text{
+        display: flex;
+        align-items: center;
+        margin: 48px auto 30px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        @include breakpoint(mobile) {
+            margin-top: 16px;
+            margin-bottom: 13px;
+            font-size: 11px;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        li + li::before{
+            content:'';
+            display: inline-block;
+            width: 1px;
+            height: 24px;
+            margin: 0 10px;
+            background: #fff;
+        }
+    }
 }
+
+.footer-bottom-text{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.81;
+    text-align: center;
+    color: #fff;
+    @include breakpoint(mobile) {
+        font-size: 11px;
+        font-weight: normal;
+    }
+}
+
+.card-content{
+    max-width: 1496px;
+    height: 1200px;
+    perspective: 1000px;
+    background-color: transparent;
+    @include breakpoint(tablet) {
+        height: 600px;
+    }
+}
+.card-box{
+    position: relative;
+    width: 1496px;
+    height: 869px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    @include breakpoint(tablet) {
+        width: 896px;
+        height: 269px;
+    }
+    img{
+        width: 100%;
+    }
+    &:hover {
+        transform: rotateY(180deg);
+        cursor: pointer;
+    }
+    &-f{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        z-index:1;
+    }//.card-box-f
+    &-b{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+    }//.card-box-b
+}
+

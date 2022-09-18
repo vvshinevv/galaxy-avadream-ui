@@ -2,21 +2,26 @@
   <section class="section5">
     <div class="section5-box">
       <h1>
-<!--        <img :src="titleUrl" class="section5-title-sub" />-->
-        <img :src="titleUrl2" class="section5-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"/>
+        <!--        <img :src="titleUrl" class="section5-title-sub" />-->
+        <img
+          :src="titleUrl"
+          class="section5-title pc-only"
+        />
       </h1>
-      <div class="section5-swiper pc-only" >
+      <div class="section5-swiper pc-only">
         <swiper
           :slidesPerView="2"
           :centeredSlides="true"
           :spaceBetween="30"
-          :allowTouchMove="false"
-          :navigation="true"
+          :navigation="false"
           :loop="true"
           :autoplay="{
-             delay: 2500,
-             disableOnInteraction: true,
-        }"
+            delay: 2500,
+            disableOnInteraction: false,
+          }"
+          :pagination="{
+            clickable: true,
+          }"
           :modules="modules"
           @swiper="onSwiper"
         >
@@ -71,7 +76,7 @@
 import { Navigation, Autoplay } from "swiper";
 import { reactive, toRefs, watch } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import WOW from 'wowjs';
+import WOW from "wowjs";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -81,16 +86,16 @@ export default {
     Swiper,
     SwiperSlide,
   },
-    mounted(){
-        let wow = new WOW.WOW({
-            boxClass: 'wow',
-            animateClass: 'animated',
-            offset: 0,
-            mobile: true,
-            live: true
-        });
-        wow.init();
-    },
+  mounted() {
+    let wow = new WOW.WOW({
+      boxClass: "wow",
+      animateClass: "animated",
+      offset: 0,
+      mobile: true,
+      live: true,
+    });
+    wow.init();
+  },
   data() {
     return {
       videoElement: null,
@@ -114,10 +119,9 @@ export default {
   },
   setup() {
     const state = reactive({
-      titleUrl: require("@/assets/image/section5/img_title_sub.png"),
-      titleUrl2: require("@/assets/image/section5/img_title.png"),
-        posterUrl: require("@/assets/image/section5/img11.png"),
-        posterUrlMo: require("@/assets/image/section5/img11_mo.png"),
+      titleUrl: require("@/assets/image/section5/img_title_sub_v2.png"),
+      posterUrl: require("@/assets/image/section5/img11.png"),
+      posterUrlMo: require("@/assets/image/section5/img11_mo.png"),
       imgUrl: [
         {
             type: "video",
@@ -127,38 +131,38 @@ export default {
             ],
         },
         {
-            type: "img",
-            src: require("@/assets/image/section5/img22.png"),
+          type: "img",
+          src: require("@/assets/image/section5/img22.png"),
         },
-      {
+        {
           type: "img",
           src: require("@/assets/image/section5/img33.png"),
-      },
-      {
+        },
+        {
           type: "img",
           src: require("@/assets/image/section5/img44.png"),
-      },
+        },
       ],
       imgUrlMo: [
+        // {
+        //   type: "video",
+        //   src: [
+        //     require("@/assets/image/section5/img2.webm"),
+        //     require("@/assets/image/section5/img2.mp4"),
+        //   ],
+        // },
         {
-          type: "video",
-          src: [
-            require("@/assets/image/section5/img2.webm"),
-            require("@/assets/image/section5/img2.mp4"),
-          ],
+          type: "img",
+          src: require("@/assets/image/section5/img22_mo.png"),
         },
-          {
-              type: "img",
-              src: require("@/assets/image/section5/img22_mo.png"),
-          },
-          {
-              type: "img",
-              src: require("@/assets/image/section5/img33_mo.png"),
-          },
-          {
-              type: "img",
-              src: require("@/assets/image/section5/img44_mo.png"),
-          },
+        {
+          type: "img",
+          src: require("@/assets/image/section5/img33_mo.png"),
+        },
+        {
+          type: "img",
+          src: require("@/assets/image/section5/img44_mo.png"),
+        },
       ],
       isActive: true,
       isActiveMo: true,
@@ -176,29 +180,29 @@ export default {
         return;
       }
     };
-      const onSwiper = (swiper) => {
-          const slides = document.querySelectorAll('.swiper-slide');
-          slides.forEach(item => {
-              item.addEventListener('mouseover', event => {
-                  swiper.autoplay.stop();
-              })
-              item.addEventListener('mouseleave', event => {
-                  swiper.autoplay.start();
-              })
-          })
-      };
+    const onSwiper = (swiper) => {
+      const slides = document.querySelectorAll(".swiper-slide");
+      slides.forEach((item) => {
+        item.addEventListener("mouseover", (event) => {
+          swiper.autoplay.stop();
+        });
+        item.addEventListener("mouseleave", (event) => {
+          swiper.autoplay.start();
+        });
+      });
+    };
     return {
       ...toRefs(state),
-      modules: [Navigation,Autoplay],
+      modules: [Autoplay],
       videoClick,
-        onSwiper,
+      onSwiper,
     };
   },
 };
 </script>
 
 <style scoped>
-.swiper-slide{
-    cursor:pointer;
+.swiper-slide {
+  cursor: pointer;
 }
 </style>
