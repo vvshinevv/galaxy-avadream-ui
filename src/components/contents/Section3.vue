@@ -2,7 +2,7 @@
   <section class="section3">
     <div class="section3-box">
       <div class="section3-intro">
-        <div class="card-content pc-only">
+        <div class="card-content">
           <div class="card-box">
             <div class="card-box-f">
               <img :src="panelMember" class="section3-panel-member" />
@@ -63,4 +63,15 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 560px) {
+    .card-content{
+        height: 340px;
+    }
+}
+@media (max-width: 440px) {
+    .card-content{
+        height: 300px;
+    }
+}
+</style>

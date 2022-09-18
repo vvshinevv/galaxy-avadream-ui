@@ -38,7 +38,7 @@ export default {
     setup() {
         const state = reactive({
             imgUrl: require("@/assets/image/section5/img2.webm"),
-            imgUrl2: require("@/assets/image/section5/img2.webm")
+            imgUrl2: require("@/assets/image/section5/img2.mp4")
         });
         return {
             ...toRefs(state),

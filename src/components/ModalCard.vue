@@ -58,8 +58,6 @@ export default {
   },
   setup() {
     const state = reactive({
-      imgUrl: require("@/assets/image/section5/img2.webm"),
-      imgUrl2: require("@/assets/image/section5/img2.webm"),
       char1: require("@/assets/image/pc_card/char1.png"),
       char1Mo: require("@/assets/image/mo_card/char1_m.png"),
       charTitle1: require("@/assets/image/pc_card/charTitle1.png"),
