@@ -46,13 +46,13 @@
     </div>
   </section>
   <!-- 비디오 노출 -->
-  <ModalImage v-model:visible="showVideo" />
+  <ModalVideo v-model:visible="showVideo" />
 </template>
 <script>
 import { Navigation, Autoplay } from "swiper";
 import { reactive, toRefs, watch } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
-import ModalImage from "@/components/ModalImage";
+import ModalVideo from "@/components/ModalVideo";
 
 import WOW from "wowjs";
 // Import Swiper styles
@@ -63,7 +63,7 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    ModalImage,
+    ModalVideo,
   },
   mounted() {
     let wow = new WOW.WOW({

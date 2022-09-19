@@ -6,18 +6,15 @@
     :showClose="true"
     :dimClose="true"
   >
-      <video
-          controls
-      >
-          <source :src="imgUrl" type="video/webm" />
-          <source :src="imgUrl2" type="video/mp4" />
-      </video>
+    <div class="modal-image-box">
+      <img :src="imgUrl" class="bg pc-only" />
+      <img :src="imgUrlMo" class="bg mobile-only" />
+    </div>
   </Modal>
 </template>
 
 <script>
 import Modal from "@/components/Modal";
-import {reactive, toRefs} from "vue";
 export default {
   name: "ModalImage",
   components: { Modal },
@@ -30,41 +27,33 @@ export default {
       type: String,
       default: "",
     },
-      imgUrlTitle: {
-          type: String,
-          default: "",
-      },
-  },
-    setup() {
-        const state = reactive({
-            imgUrl: require("@/assets/image/section5/img2.webm"),
-            imgUrl2: require("@/assets/image/section5/img2.mp4")
-        });
-        return {
-            ...toRefs(state),
-        };
+    imgUrlMo: {
+      type: String,
+      default: "",
     },
+  },
 };
 </script>
 
 <style scoped lang="scss">
 :deep(.modal-image){
-    max-width: 1920px;
-    max-height: 1080px;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 767px){
+    width: auto;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content:center;
+  }
 }
-video{
-    width: calc(100% - 480px);
-    height: auto;
-    @media (min-width: 768px) and (max-width: 1279px) {
-        width: calc(100% - 140px);
-    }
-    @media (max-width: 767px) {
-        width: 100%;
-    }
+.bg{
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 767px){
+    width: auto;
+    height: 100vh;
+  }
 }
 </style>

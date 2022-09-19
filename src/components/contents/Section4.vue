@@ -45,8 +45,9 @@
       </ul>
     </div>
   </section>
-  <!-- 비디오 노출 -->
-  <ModalCard v-model:visible="showCard" />
+  <!-- 캐릭터 카드 노출 -->
+<!--  <ModalCard v-model:visible="showCard" />-->
+  <ModalImage :imgUrl="imgComming" :imgUrlMo="imgCommingMo" v-model:visible="showCard"/>
 </template>
 
 <script>
@@ -58,9 +59,11 @@ import ModalCard from "@/components/ModalCard";
 import "swiper/css";
 import "swiper/css/navigation";
 import WOW from "wowjs";
+import ModalImage from "@/components/ModalImage";
 export default {
   name: "Section4",
   components: {
+    ModalImage,
     Swiper,
     SwiperSlide,
     ModalCard,
@@ -80,6 +83,8 @@ export default {
       titleUrl: require("@/assets/image/section4/img_title2.png"),
       titleUrl2: require("@/assets/image/section4/img_ava.png"),
       showCard: false,
+      imgComming: require("@/assets/image/img_comming.png"),
+      imgCommingMo: require("@/assets/image/img_comming_mo.png"),
       imgUrl: [
         {
           src: require("@/assets/image/section4/img_card1.png"),
