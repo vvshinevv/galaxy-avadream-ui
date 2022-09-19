@@ -181,7 +181,7 @@ export default {
   }
 }
 .pc-only {
-  display: block;
+  display: flex;
   @media (max-width: 767px) {
     display: none;
   }
