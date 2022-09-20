@@ -58,6 +58,7 @@
     align-items: center;
     @include breakpoint(tablet) {
       margin-top: 100px;
+      width: 70%;
     }
     @include breakpoint(mobile) {
       margin-top: 74px;

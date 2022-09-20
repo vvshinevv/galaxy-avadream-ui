@@ -3,13 +3,15 @@
     <div class="section3-box">
       <div class="section3-intro">
         <div class="card-content">
-          <div
-            class="card-box wow flip"
-            data-wow-duration="1s"
-            data-wow-delay="0.5s"
-            data-iteration-count="5"
-          >
-            <img :src="panelMember" class="section3-panel-member" />
+          <div class="card-box wow flip"
+               data-wow-duration="1s"
+               data-wow-delay="0.5s">
+            <div class="card-box-f">
+              <img :src="panelMember" class="section3-panel-member" />
+            </div>
+            <div class="card-box-b">
+              <img :src="panelMemberBack" class="section3-panel-member" />
+            </div>
           </div>
         </div>
       </div>
