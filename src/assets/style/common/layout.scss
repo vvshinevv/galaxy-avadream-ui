@@ -119,7 +119,10 @@ body {
   height: 869px;
   text-align: center;
   transform-style: preserve-3d;
-  //animation: 1s 1 alternate rotate;
+  &.form-fixed{
+    animation: 1s 1 alternate rotate;
+    animation-fill-mode: forwards;
+  }
 
   @include breakpoint(tablet) {
     width: 896px;
@@ -153,6 +156,6 @@ body {
   }
 
   to {
-    transform: rotateY(360deg);
+    transform: rotateY(180deg);
   }
 }

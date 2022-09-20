@@ -3,9 +3,9 @@
     <div class="section3-box">
       <div class="section3-intro">
         <div class="card-content">
-          <div class="card-box wow flip"
-               data-wow-duration="1s"
-               data-wow-delay="0.5s">
+          <div class="card-box"
+               id="flipCard"
+          >
             <div class="card-box-f">
               <img :src="panelMember" class="section3-panel-member" />
             </div>
@@ -84,6 +84,31 @@ export default {
       live: true,
     });
     wow.init();
+
+    window.onscroll = () => {
+      const windowWidth = window.innerWidth;
+      const top = window.pageYOffset || document.documentElement.scrollTop;
+      const flipCard = document.getElementById('flipCard');
+      if(windowWidth > 1280){
+        if (top > 4900) {
+          flipCard.classList.add("form-fixed");
+        } else {
+          flipCard.classList.remove("form-fixed");
+        }
+      } else if(windowWidth > 768){
+        if (top > 3500) {
+          flipCard.classList.add("form-fixed");
+        } else {
+          flipCard.classList.remove("form-fixed");
+        }
+      }else{
+        if (top > 1800) {
+          flipCard.classList.add("form-fixed");
+        } else {
+          flipCard.classList.remove("form-fixed");
+        }
+      }
+    }
   },
   setup() {
     const state = reactive({
