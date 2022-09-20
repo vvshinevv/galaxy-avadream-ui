@@ -87,102 +87,150 @@ export default {
       imgCommingMo: require("@/assets/image/img_comming_mo.png"),
       imgUrl: [
         {
-          src: require("@/assets/image/section4/img_card1.png"),
+          src: require("@/assets/image/section4/img_c_card_1.png"),
         },
         {
-          src: require("@/assets/image/section4/img_card2.png"),
+          src: require("@/assets/image/section4/img_c_card_2.png"),
         },
         {
-          src: require("@/assets/image/section4/img_card3.png"),
+          src: require("@/assets/image/section4/img_c_card_3.png"),
         },
         {
-          src: require("@/assets/image/section4/img_card4.png"),
+          src: require("@/assets/image/section4/img_c_card_4.png"),
         },
         {
-          src: require("@/assets/image/section4/img_card5.png"),
+          src: require("@/assets/image/section4/img_c_card_5.png"),
         },
         {
-          src: require("@/assets/image/section4/img_card6.png"),
+          src: require("@/assets/image/section4/img_c_card_6.png"),
         },
         {
-          src: require("@/assets/image/section4/img_card7.png"),
+          src: require("@/assets/image/section4/img_c_card_7.png"),
         },
         {
-          src: require("@/assets/image/section4/img_card8.png"),
+          src: require("@/assets/image/section4/img_c_card_8.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_9.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_10.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_11.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_12.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_13.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_14.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_15.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_16.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_17.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_18.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_19.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_20.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_21.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_22.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_23.png"),
+        },
+        {
+          src: require("@/assets/image/section4/img_c_card_24.png"),
         },
       ],
       imgUrlMo: [
         {
-          src: require("@/assets/image/section4/img_s1.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_1.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s2.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_2.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s3.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_3.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s4.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_4.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s5.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_5.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s6.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_6.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s1.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_7.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s2.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_8.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s3.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_9.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s4.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_10.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s5.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_11.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s6.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_12.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s1.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_13.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s2.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_14.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s3.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_15.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s4.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_16.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s5.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_17.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s6.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_18.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s1.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_19.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s2.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_20.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s3.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_21.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s4.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_22.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s5.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_23.png"),
         },
         {
-          src: require("@/assets/image/section4/img_s6.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_24.png"),
         },
       ],
     });
