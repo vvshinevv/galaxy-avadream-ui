@@ -10,15 +10,15 @@
     justify-content: center;
     box-sizing: border-box;
     //max-width: $content-width;
-    overflow: hidden;
+    //overflow: hidden;
     margin: 0 auto 0;
     @include breakpoint(tablet) {
-      overflow: hidden;
+      //overflow: hidden;
       height: auto;
       margin-top: 0;
     }
     @include breakpoint(mobile) {
-      overflow: hidden;
+      //overflow: hidden;
       height: auto;
       margin-top: 0;
     }
