@@ -130,7 +130,7 @@ body {
   }
   @include breakpoint(mobile) {
     width: 420px;
-    height: auto;
+    height: 300px;
   }
   img{
     width: 100%;
