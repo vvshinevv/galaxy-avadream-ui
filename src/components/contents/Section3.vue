@@ -21,15 +21,11 @@
     <div class="section3-panel-box" id="flipCardPanel">
       <img
         :src="panel"
-        class="section3-panel-member wow fadeInUp pc-only"
-        data-wow-duration="1s"
-        data-wow-delay="0.5s"
+        class="section3-panel-member pc-only"
       />
       <img
           :src="panelMo"
-          class="section3-panel-member wow fadeInUp mobile-only"
-          data-wow-duration="1s"
-          data-wow-delay="0.5s"
+          class="section3-panel-member mobile-only"
       />
       <ul class="section3-panel-list">
         <li>
