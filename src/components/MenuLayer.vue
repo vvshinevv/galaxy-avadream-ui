@@ -21,7 +21,7 @@
           </a>
         </li>
         <li class="menu-layer-item">
-          <a href="#" target="_blank"  class="menu-layer-link" @click.native="showModal = false">
+          <a href="http://broadcast.tvchosun.com/broadcast/program/2/C202200147.cstv" target="_blank"  class="menu-layer-link" @click.native="showModal = false">
             티비조선 바로가기
           </a>
         </li>
