@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <a href="#" class="pc-only">
+    <a href="http://broadcast.tvchosun.com/broadcast/program/2/C202200147.cstv" class="pc-only" target="_blank">
       <img :src="logoUrl2" class="logo-chosun" />
     </a>
     <router-link class="header-logo" to="/">

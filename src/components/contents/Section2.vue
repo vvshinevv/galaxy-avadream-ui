@@ -2,14 +2,15 @@
   <section class="section2">
     <img :src="titleUrl" class="section2-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" />
     <div class="section2-video">
-      <video controls :poster="posterUrl" style="object-fit: contain" id="videoBox"
-             @playing="updatePaused"
-             @pause="updatePaused"
-             @canplay="updatePaused">
-        <source :src="movieUrl" type="video/webm" />
-        <source :src="movieUrl2" type="video/mp4" />
-      </video>
-        <div class="icon" v-show="pausedBtn" @click="play"></div>
+<!--      <video controls :poster="posterUrl" style="object-fit: contain" id="videoBox"-->
+<!--             @playing="updatePaused"-->
+<!--             @pause="updatePaused"-->
+<!--             @canplay="updatePaused">-->
+<!--        <source :src="movieUrl" type="video/webm" />-->
+<!--        <source :src="movieUrl2" type="video/mp4" />-->
+<!--      </video>-->
+<!--        <div class="icon" v-show="pausedBtn" @click="play"></div>-->
+      <iframe width="100%" style="object-fit: contain;" src="https://www.youtube.com/embed/CcgyExxF2F8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="section2-character">
       <img :src="imgCard" class="card wow bounceInLeft center" data-wow-duration="1s" data-wow-delay="0.5s"/>
@@ -87,4 +88,22 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+iframe{
+  height: 1000px;
+
+}
+
+@media (min-width: 768px) and (max-width: 1279px){
+  iframe{
+    height: 600px;
+
+  }
+}
+@media (max-width: 767px){
+  iframe{
+    height: 280px;
+
+  }
+}
+</style>
