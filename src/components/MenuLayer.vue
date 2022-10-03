@@ -16,7 +16,7 @@
     <div class="menu-layer-box" :class="{ on: showModal === true }">
       <ul class="menu-layer-list">
         <li class="menu-layer-item">
-          <a href="#" target="_blank"  class="menu-layer-link" @click.native="showModal = false">
+          <a href="https://galaxyava.com/" target="_blank"  class="menu-layer-link" @click.native="showModal = false">
             아바드림 세계관 보러가기
           </a>
         </li>

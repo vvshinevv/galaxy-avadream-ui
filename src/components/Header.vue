@@ -6,7 +6,7 @@
     <router-link class="header-logo" to="/">
       <img :src="logoUrl" />
     </router-link>
-    <a href="#" class="pc-only"><img :src="logoUrl3" class="logo-world" /></a>
+    <a href="https://galaxyava.com/" class="pc-only"><img :src="logoUrl3" class="logo-world" /></a>
     <MenuLayer />
   </header>
 </template>
