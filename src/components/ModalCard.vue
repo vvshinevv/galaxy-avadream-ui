@@ -239,6 +239,7 @@ export default {
 .char_sns {
   display: flex;
   align-items: center;
+  margin-top: 20px;
   @media (max-width: 767px) {
     box-sizing: border-box;
     padding: 0 20px;
@@ -293,7 +294,6 @@ export default {
   flex: none;
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
   .video {
     position: relative;
     z-index: 10;
