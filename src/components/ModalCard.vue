@@ -8,13 +8,52 @@
   >
     <div class="card-char-box pc-only">
       <div class="card-char-img">
-        <img :src="char1" />
+        <img :src="chacCardData.char1" />
       </div>
       <div class="card-char-video">
-        <img :src="charTitle1" class="title" />
-        <img :src="charVideo1" class="video" />
+        <img :src="chacCardData.charTitleSub1" class="title" />
+        <img :src="chacCardData.charTitle1" class="title" />
+        <div class="ytube">
+          <img
+            :src="chacCardData.charVideo1"
+            class="video"
+            @click="imgThumbClick"
+          />
+          <iframe
+            id="videoYtube"
+            width="100%"
+            style="object-fit: contain"
+            :src="chacCardData.videoUrl"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div class="char_sns">
-          <p class="text">동보희 이야기 보러가기</p>
+          <p class="text">
+            {{ chacCardData.charText
+            }}<svg
+              style="margin-top: -4px; vertical-align: middle"
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+            >
+              <path
+                data-name="사각형 10"
+                transform="rotate(180 24 24)"
+                style="fill: none"
+                d="M0 0h48v48H0z"
+              />
+              <path
+                data-name="패스 1563"
+                d="M15.668 0 31.2 23.774H0z"
+                transform="rotate(90 14.533 22.933)"
+                style="fill: #fff"
+              />
+            </svg>
+          </p>
           <img :src="sns1" class="sns" />
           <img :src="sns2" class="sns2" />
         </div>
@@ -22,12 +61,57 @@
     </div>
     <div class="card-char-box mobile-only">
       <div class="card-char-img">
-        <img :src="char1Mo" />
+        <img :src="chacCardData.charTitleSub1" class="sub-title" />
+        <img :src="chacCardData.char1" />
+        <img :src="chacCardData.charTitle1" class="title" />
       </div>
       <div class="card-char-video">
-        <img :src="charVideo1" class="video" />
+        <div class="ytube">
+          <img
+            :src="chacCardData.charVideo1"
+            class="video"
+            @click="imgThumbClick"
+          />
+          <iframe
+            id="videoYtube"
+            width="100%"
+            style="object-fit: contain"
+            :src="chacCardData.videoUrl"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div class="char_sns">
-          <p class="text">동보희 이야기 보러가기</p>
+          <p class="text">
+            {{ chacCardData.charText
+            }}<svg
+              style="
+                margin-top: -2px;
+                margin-left: -4px;
+                vertical-align: middle;
+                transform: scale(0.6);
+              "
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+            >
+              <path
+                data-name="사각형 10"
+                transform="rotate(180 24 24)"
+                style="fill: none"
+                d="M0 0h48v48H0z"
+              />
+              <path
+                data-name="패스 1563"
+                d="M15.668 0 31.2 23.774H0z"
+                transform="rotate(90 14.533 22.933)"
+                style="fill: #fff"
+              />
+            </svg>
+          </p>
           <img :src="sns1" class="sns" />
           <img :src="sns2" class="sns2" />
         </div>
@@ -38,7 +122,7 @@
 
 <script>
 import Modal from "@/components/Modal";
-import { reactive, toRefs } from "vue";
+import { reactive, toRefs, onMounted } from "vue";
 export default {
   name: "ModalCard",
   components: { Modal },
@@ -55,17 +139,26 @@ export default {
       type: String,
       default: "",
     },
+    chacCardData: {
+      type: Object,
+      default: () => {
+        return {};
+      },
+    },
   },
-  setup() {
+  setup(props) {
     const state = reactive({
-      char1: require("@/assets/image/pc_card/char1.png"),
-      char1Mo: require("@/assets/image/mo_card/char1_m.png"),
-      charTitle1: require("@/assets/image/pc_card/charTitle1.png"),
-      charVideo1: require("@/assets/image/pc_card/charVideo1.png"),
       sns1: require("@/assets/image/pc_card/ico_u.png"),
       sns2: require("@/assets/image/pc_card/ico_in.png"),
     });
+    const imgThumbClick = (e) => {
+      e.preventDefault();
+      const playVideo = event.target;
+      playVideo.style.zIndex = -1;
+      document.querySelector("#videoYtube").src += "?autoplay=1";
+    };
     return {
+      imgThumbClick,
       ...toRefs(state),
     };
   },
@@ -100,16 +193,26 @@ export default {
 }
 .card-char-box {
   display: flex;
+  height: 100%;
   img {
-    width: 100%;
+    width: 95%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 }
 .card-char-img {
-  width: 40%;
+  width: 45%;
   display: flex;
   align-items: flex-end;
+  .title {
+    margin-top: -40px;
+  }
+  .sub-title {
+  }
   @media (max-width: 767px) {
-    margin: 0 auto;
+    flex-direction: column;
+    margin: 45px auto 20px;
     width: 60%;
   }
 }
@@ -118,6 +221,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 80px;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding-right: 20px;
+  }
+  @media (max-width: 767px) {
+    padding-right: 0;
+  }
   .title {
     margin-bottom: 20px;
     width: 435px;
@@ -125,24 +235,10 @@ export default {
       width: 235px;
     }
   }
-  .video {
-    width: calc(100% - 80px);
-    margin-bottom: 20px;
-    @media (min-width: 768px) and (max-width: 1279px) {
-      width: calc(100% - 20px);
-    }
-    @media (max-width: 767px) {
-      width: 100%;
-    }
-  }
 }
 .char_sns {
-  width: calc(100% - 80px);
   display: flex;
   align-items: center;
-  @media (min-width: 768px) and (max-width: 1279px) {
-    width: calc(100% - 20px);
-  }
   @media (max-width: 767px) {
     box-sizing: border-box;
     padding: 0 20px;
@@ -177,6 +273,7 @@ export default {
     }
     @media (max-width: 767px) {
       width: 24px;
+      margin-left: 10px;
     }
   }
 }
@@ -190,6 +287,25 @@ export default {
   display: none;
   @media (max-width: 767px) {
     display: block;
+  }
+}
+.ytube {
+  flex: none;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  .video {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+  }
+  iframe {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 </style>

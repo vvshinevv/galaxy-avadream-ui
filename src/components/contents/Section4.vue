@@ -26,7 +26,7 @@
           v-for="(image, idx) of imgUrl"
           :key="'slide_image_' + idx"
         >
-          <div class="image-card-box" @click="showCard = true">
+          <div class="image-card-box" @click="showCardClick(idx)">
             <img :src="image.src" class="image-card" />
           </div>
         </swiper-slide>
@@ -38,7 +38,7 @@
         <li
           v-for="(moUrl, index) in imgUrlMo"
           :key="'img' + index"
-          @click="showCard = true"
+          @click="showCardClick(index)"
         >
           <img :src="moUrl.src" />
         </li>
@@ -46,8 +46,12 @@
     </div>
   </section>
   <!-- 캐릭터 카드 노출 -->
-<!--  <ModalCard v-model:visible="showCard" />-->
-  <ModalImage :imgUrl="imgComming" :imgUrlMo="imgCommingMo" v-model:visible="showCard"/>
+  <ModalCard v-model:visible="showCard" :chacCardData="chacCardData" />
+  <ModalImage
+    :imgUrl="imgComming"
+    :imgUrlMo="imgCommingMo"
+    v-model:visible="showCommingSoon"
+  />
 </template>
 
 <script>
@@ -83,14 +87,15 @@ export default {
       titleUrl: require("@/assets/image/section4/img_title2.png"),
       titleUrl2: require("@/assets/image/section4/img_ava.png"),
       showCard: false,
+      showCommingSoon: false,
       imgComming: require("@/assets/image/img_comming.png"),
       imgCommingMo: require("@/assets/image/img_comming_mo.png"),
       imgUrl: [
         {
-          src: require("@/assets/image/section4/img_c_card_1.png"),
+          src: require("@/assets/image/section4/img_c_card_open.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_2.png"),
+          src: require("@/assets/image/section4/img_c_card_open2.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_3.png"),
@@ -161,10 +166,10 @@ export default {
       ],
       imgUrlMo: [
         {
-          src: require("@/assets/image/section4/img_c_card_mo_1.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_2.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open2.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_mo_3.png"),
@@ -233,9 +238,44 @@ export default {
           src: require("@/assets/image/section4/img_c_card_mo_24.png"),
         },
       ],
+      chacCardData: {},
+      charCard: [
+        {
+          char1: require("@/assets/image/pc_card/char1.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle1.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub1.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo1.png"),
+          charText: "기록희 이야기 보러가기",
+          videoUrl: "https://youtu.be/ksQLEGck8JE",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char2.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle2.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub2.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo2.png"),
+          charText: "음원깡패 이야기 보러가기",
+          videoUrl: "https://youtu.be/ktSDWUQyAsA",
+        },
+      ],
     });
+    const showCardClick = (index) => {
+      switch (index) {
+        case 0:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 1:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        default:
+          state.showCommingSoon = true;
+          break;
+      }
+    };
     return {
       ...toRefs(state),
+      showCardClick,
       modules: [Autoplay],
     };
   },

@@ -1,12 +1,18 @@
 <template>
   <header class="header">
-    <a href="http://broadcast.tvchosun.com/broadcast/program/2/C202200147.cstv" class="pc-only" target="_blank">
+    <a
+      href="http://broadcast.tvchosun.com/broadcast/program/2/C202200147.cstv"
+      class="pc-only"
+      target="_blank"
+    >
       <img :src="logoUrl2" class="logo-chosun" />
     </a>
     <router-link class="header-logo" to="/">
       <img :src="logoUrl" />
     </router-link>
-    <a href="https://galaxyava.com/" class="pc-only"><img :src="logoUrl3" class="logo-world" /></a>
+    <a href="https://galaxyava.com/" target="_blank" class="pc-only"
+      ><img :src="logoUrl3" class="logo-world"
+    /></a>
     <MenuLayer />
   </header>
 </template>
