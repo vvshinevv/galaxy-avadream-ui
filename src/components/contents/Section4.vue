@@ -246,7 +246,7 @@ export default {
           charTitleSub1: require("@/assets/image/pc_card/charTitleSub1.png"),
           charVideo1: require("@/assets/image/pc_card/charVideo1.png"),
           charText: "기록희 이야기 보러가기",
-          videoUrl: "https://youtu.be/ksQLEGck8JE",
+          videoUrl: "https://www.youtube.com/embed/ksQLEGck8JE",
         },
         {
           char1: require("@/assets/image/pc_card/char2.png"),
@@ -254,7 +254,7 @@ export default {
           charTitleSub1: require("@/assets/image/pc_card/charTitleSub2.png"),
           charVideo1: require("@/assets/image/pc_card/charVideo2.png"),
           charText: "음원깡패 이야기 보러가기",
-          videoUrl: "https://youtu.be/ktSDWUQyAsA",
+          videoUrl: "https://www.youtube.com/embed/ktSDWUQyAsA",
         },
       ],
     });
