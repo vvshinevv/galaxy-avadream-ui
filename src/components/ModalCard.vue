@@ -300,7 +300,7 @@ export default {
     width: 100%;
   }
   iframe {
-    height: 100%;
+    height: 90%;
     position: absolute;
     top: 0;
     left: 0;
