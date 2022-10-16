@@ -98,10 +98,10 @@ export default {
           src: require("@/assets/image/section4/img_c_card_open2.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_3.png"),
+          src: require("@/assets/image/section4/img_c_card_open3.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_4.png"),
+          src: require("@/assets/image/section4/img_c_card_open4.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_5.png"),
@@ -172,10 +172,10 @@ export default {
           src: require("@/assets/image/section4/img_c_card_mo_open2.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_3.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open3.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_4.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open4.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_mo_5.png"),
@@ -256,6 +256,22 @@ export default {
           charText: "음원깡패 이야기 보러가기",
           videoUrl: "https://www.youtube.com/embed/ktSDWUQyAsA",
         },
+        {
+          char1: require("@/assets/image/pc_card/char3.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle3.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub3.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo3.png"),
+          charText: "삐뚜르 빼뚜르 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/pos7ZQOH9DM",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char4.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle4.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub4.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo4.png"),
+          charText: "자이언트 손 커엽이 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/pK-CM9DV7pw",
+        },
       ],
     });
     const showCardClick = (index) => {
@@ -265,6 +281,14 @@ export default {
           state.chacCardData = state.charCard[index];
           break;
         case 1:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 2:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 3:
           state.showCard = true;
           state.chacCardData = state.charCard[index];
           break;
