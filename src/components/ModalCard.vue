@@ -31,7 +31,8 @@
           ></iframe>
         </div>
         <div class="char_sns">
-          <p class="text">
+            <a class="text" target="_blank" href="https://galaxyava.com"
+            >
             {{ chacCardData.charText
             }}<svg
               style="margin-top: -4px; vertical-align: middle"
@@ -53,7 +54,7 @@
                 style="fill: #fff"
               />
             </svg>
-          </p>
+          </a>
           <img :src="sns1" class="sns" />
           <img :src="sns2" class="sns2" />
         </div>
@@ -84,7 +85,8 @@
           ></iframe>
         </div>
         <div class="char_sns">
-          <p class="text">
+            <a class="text" target="_blank" href="https://galaxyava.com"
+            >
             {{ chacCardData.charText
             }}<svg
               style="
@@ -111,7 +113,7 @@
                 style="fill: #fff"
               />
             </svg>
-          </p>
+          </a>
           <img :src="sns1" class="sns" />
           <img :src="sns2" class="sns2" />
         </div>
