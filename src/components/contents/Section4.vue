@@ -104,10 +104,10 @@ export default {
           src: require("@/assets/image/section4/img_c_card_open4.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_5.png"),
+          src: require("@/assets/image/section4/img_c_card_open5.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_6.png"),
+          src: require("@/assets/image/section4/img_c_card_open6.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_7.png"),
@@ -178,10 +178,10 @@ export default {
           src: require("@/assets/image/section4/img_c_card_mo_open4.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_5.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open5.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_6.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open6.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_mo_7.png"),
@@ -272,6 +272,22 @@ export default {
           charText: "자이언트 손 커엽이 이야기 보러가기",
           videoUrl: "https://www.youtube.com/embed/pK-CM9DV7pw",
         },
+        {
+          char1: require("@/assets/image/pc_card/char5.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle5.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub5.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo5.png"),
+          charText: "마리앙 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/sbdft0Ps9M8",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char6.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle6.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub6.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo6.png"),
+          charText: "반이바니 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/93e7iknXdAY",
+        },
       ],
     });
     const showCardClick = (index) => {
@@ -289,6 +305,14 @@ export default {
           state.chacCardData = state.charCard[index];
           break;
         case 3:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 4:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 5:
           state.showCard = true;
           state.chacCardData = state.charCard[index];
           break;

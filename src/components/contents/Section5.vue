@@ -46,7 +46,7 @@
     </div>
   </section>
   <!-- 비디오 노출 -->
-  <ModalVideo v-model:visible="showVideo" />
+  <ModalVideo v-model:visible="showVideo" :movieUrl="movieUrl"/>
 </template>
 <script>
 import { Navigation, Autoplay } from "swiper";
@@ -113,7 +113,7 @@ export default {
         },
         {
           type: "img",
-          src: require("@/assets/image/section5/img33.png"),
+          src: require("@/assets/image/section5/img33_v2.jpg"),
         },
         {
           type: "img",
@@ -131,7 +131,7 @@ export default {
         },
         {
           type: "img",
-          src: require("@/assets/image/section5/img33_mo.png"),
+          src: require("@/assets/image/section5/img33_v2.jpg"),
         },
         {
           type: "img",
@@ -140,6 +140,19 @@ export default {
       ],
       isActive: true,
       isActiveMo: true,
+        movieUrl:{},
+        movieUrlList:[
+            {
+                url1: require("@/assets/image/section5/img2.webm"),
+                url2: require("@/assets/image/section5/img2.mp4"),
+            },
+            {
+               youtubeLink : 'https://www.youtube.com/embed/p4navGrGbj4'
+            },
+            {
+                youtubeLink: 'https://www.youtube.com/embed/58HYg2f8zu8'
+            }
+        ]
     });
     const videoClick = () => {
       let videoElem = document.getElementById("videoBox2");
@@ -168,6 +181,13 @@ export default {
     const clickPoster = (index) => {
       if (index === 0) {
         state.showVideo = true;
+        state.movieUrl = state.movieUrlList[index];
+      }else if(index === 1){
+          state.showVideo = true;
+          state.movieUrl = state.movieUrlList[index];
+      }else if(index === 2){
+          state.showVideo = true;
+          state.movieUrl = state.movieUrlList[index];
       }
     };
     return {
