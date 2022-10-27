@@ -110,10 +110,10 @@ export default {
           src: require("@/assets/image/section4/img_c_card_open6.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_7_open.png"),
+          src: require("@/assets/image/section4/img_c_card_8_open.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_8_open.png"),
+          src: require("@/assets/image/section4/img_c_card_7_open.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_9.png"),
@@ -184,10 +184,10 @@ export default {
           src: require("@/assets/image/section4/img_c_card_mo_open6.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_open7.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open8.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_open8.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open7.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_mo_9.png"),
@@ -289,20 +289,20 @@ export default {
           videoUrl: "https://www.youtube.com/embed/93e7iknXdAY",
         },
         {
-          char1: require("@/assets/image/pc_card/char7.png"),
-          charTitle1: require("@/assets/image/pc_card/charTitle7.png"),
-          charTitleSub1: require("@/assets/image/pc_card/charTitleSub7.png"),
-          charVideo1: require("@/assets/image/pc_card/charVideo7.png"),
-          charText: "실리아 이야기 보러가기",
-          videoUrl: "https://www.youtube.com/embed/7NNAP--HEFg",
-        },
-        {
           char1: require("@/assets/image/pc_card/char8.png"),
           charTitle1: require("@/assets/image/pc_card/charTitle8.png"),
           charTitleSub1: require("@/assets/image/pc_card/charTitleSub8.png"),
           charVideo1: require("@/assets/image/pc_card/charVideo8.png"),
           charText: "플라이 이야기 보러가기",
           videoUrl: "https://www.youtube.com/embed/iAjIQGjars8",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char7.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle7.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub7.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo7.png"),
+          charText: "실리아 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/7NNAP--HEFg",
         },
       ],
     });
@@ -332,14 +332,14 @@ export default {
           state.showCard = true;
           state.chacCardData = state.charCard[index];
           break;
-          case 6:
-              state.showCard = true;
-              state.chacCardData = state.charCard[index];
-              break;
-          case 7:
-              state.showCard = true;
-              state.chacCardData = state.charCard[index];
-              break;
+        case 6:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 7:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
         default:
           state.showCommingSoon = true;
           break;
