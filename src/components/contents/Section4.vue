@@ -304,6 +304,22 @@ export default {
           charText: "실리아 이야기 보러가기",
           videoUrl: "https://www.youtube.com/embed/7NNAP--HEFg",
         },
+        {
+          char1: require("@/assets/image/pc_card/char9.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle9.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub9.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo9.png"),
+          charText: "마!도로스 아이가 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/mu10E3bg7og",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char10.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle10.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub10.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo10.png"),
+          charText: "안질리나 젤리곰 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+        },
       ],
     });
     const showCardClick = (index) => {
@@ -337,6 +353,14 @@ export default {
           state.chacCardData = state.charCard[index];
           break;
         case 7:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 8:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 9:
           state.showCard = true;
           state.chacCardData = state.charCard[index];
           break;
