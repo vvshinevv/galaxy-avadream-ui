@@ -116,10 +116,10 @@ export default {
           src: require("@/assets/image/section4/img_c_card_7_open.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_9.png"),
+          src: require("@/assets/image/section4/img_c_card_9_open.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_10.png"),
+          src: require("@/assets/image/section4/img_c_card_10_open.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_11.png"),
@@ -190,10 +190,10 @@ export default {
           src: require("@/assets/image/section4/img_c_card_mo_open7.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_9.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_9_open.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_10.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_10_open.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_mo_11.png"),
