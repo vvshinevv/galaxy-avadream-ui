@@ -320,6 +320,38 @@ export default {
           charText: "안질리나 젤리곰 이야기 보러가기",
           videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
         },
+        {
+          char1: require("@/assets/image/pc_card/char13.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle13.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub13.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo13.png"),
+          charText: "싼티안나 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char14.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle14.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub14.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo14.png"),
+          charText: "치유신 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char11.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle11.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub11.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo11.png"),
+          charText: "돈벼락 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char12.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle12.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub12.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo12.png"),
+          charText: "미스터리 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+        },
       ],
     });
     const showCardClick = (index) => {
@@ -361,6 +393,22 @@ export default {
           state.chacCardData = state.charCard[index];
           break;
         case 9:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 10:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 11:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 12:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 13:
           state.showCard = true;
           state.chacCardData = state.charCard[index];
           break;
