@@ -122,16 +122,16 @@ export default {
           src: require("@/assets/image/section4/img_c_card_10_open.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_11.png"),
+          src: require("@/assets/image/section4/img_c_card_open11.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_12.png"),
+          src: require("@/assets/image/section4/img_c_card_open12.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_13.png"),
+          src: require("@/assets/image/section4/img_c_card_open13.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_14.png"),
+          src: require("@/assets/image/section4/img_c_card_open14.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_15.png"),
@@ -196,16 +196,16 @@ export default {
           src: require("@/assets/image/section4/img_c_card_mo_10_open.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_11.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open11.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_12.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open12.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_13.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open13.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_14.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open14.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_mo_15.png"),
@@ -326,7 +326,7 @@ export default {
           charTitleSub1: require("@/assets/image/pc_card/charTitleSub13.png"),
           charVideo1: require("@/assets/image/pc_card/charVideo13.png"),
           charText: "싼티안나 이야기 보러가기",
-          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+          videoUrl: "https://www.youtube.com/embed/ZP7cD-xSGY8",
         },
         {
           char1: require("@/assets/image/pc_card/char14.png"),
@@ -334,7 +334,7 @@ export default {
           charTitleSub1: require("@/assets/image/pc_card/charTitleSub14.png"),
           charVideo1: require("@/assets/image/pc_card/charVideo14.png"),
           charText: "치유신 이야기 보러가기",
-          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+          videoUrl: "https://www.youtube.com/embed/6wJFRF591Dw",
         },
         {
           char1: require("@/assets/image/pc_card/char11.png"),
@@ -342,7 +342,7 @@ export default {
           charTitleSub1: require("@/assets/image/pc_card/charTitleSub11.png"),
           charVideo1: require("@/assets/image/pc_card/charVideo11.png"),
           charText: "돈벼락 이야기 보러가기",
-          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+          videoUrl: "https://www.youtube.com/embed/Xa-7aJnQs_w",
         },
         {
           char1: require("@/assets/image/pc_card/char12.png"),
@@ -350,7 +350,7 @@ export default {
           charTitleSub1: require("@/assets/image/pc_card/charTitleSub12.png"),
           charVideo1: require("@/assets/image/pc_card/charVideo12.png"),
           charText: "미스터리 이야기 보러가기",
-          videoUrl: "https://www.youtube.com/embed/DnDpBULA5-I",
+          videoUrl: "https://www.youtube.com/embed/g0_ANTcQ3WY",
         },
       ],
     });
