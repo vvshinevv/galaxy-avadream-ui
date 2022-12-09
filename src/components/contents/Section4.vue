@@ -134,16 +134,16 @@ export default {
           src: require("@/assets/image/section4/img_c_card_open14.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_15.png"),
+          src: require("@/assets/image/section4/img_c_card_open18.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_16.png"),
+          src: require("@/assets/image/section4/img_c_card_open17.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_17.png"),
+          src: require("@/assets/image/section4/img_c_card_open16.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_18.png"),
+          src: require("@/assets/image/section4/img_c_card_open15.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_19.png"),
@@ -208,16 +208,16 @@ export default {
           src: require("@/assets/image/section4/img_c_card_mo_open14.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_15.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open18.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_16.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open17.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_17.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open16.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_18.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open15.png"),
         },
         {
           src: require("@/assets/image/section4/img_c_card_mo_19.png"),
@@ -352,6 +352,38 @@ export default {
           charText: "미스터리 이야기 보러가기",
           videoUrl: "https://www.youtube.com/embed/g0_ANTcQ3WY",
         },
+        {
+          char1: require("@/assets/image/pc_card/char18.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle18.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub18.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo18.png"),
+          charText: "MC하대수 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/1dYjpfVIPmY",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char17.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle17.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub17.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo17.png"),
+          charText: "피어나 공주 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/O4Ij4BABUxs",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char16.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle16.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub16.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo16.png"),
+          charText: "특수요원 진 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/zpYueIJEAZI",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char15.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle15.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub15.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo15.png"),
+          charText: "동보희 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/U2d-hqkKVVM",
+        },
       ],
     });
     const showCardClick = (index) => {
@@ -409,6 +441,22 @@ export default {
           state.chacCardData = state.charCard[index];
           break;
         case 13:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 14:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 15:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 16:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 17:
           state.showCard = true;
           state.chacCardData = state.charCard[index];
           break;
