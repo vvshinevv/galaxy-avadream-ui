@@ -146,22 +146,22 @@ export default {
           src: require("@/assets/image/section4/img_c_card_open15.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_19.png"),
+          src: require("@/assets/image/section4/img_c_card_open19.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_20.png"),
+          src: require("@/assets/image/section4/img_c_card_open20.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_21.png"),
+          src: require("@/assets/image/section4/img_c_card_open21.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_22.png"),
+          src: require("@/assets/image/section4/img_c_card_open22.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_23.png"),
+          src: require("@/assets/image/section4/img_c_card_open23.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_24.png"),
+          src: require("@/assets/image/section4/img_c_card_open24.png"),
         },
       ],
       imgUrlMo: [
@@ -220,22 +220,22 @@ export default {
           src: require("@/assets/image/section4/img_c_card_mo_open15.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_19.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open19.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_20.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open20.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_21.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open21.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_22.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open22.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_23.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open23.png"),
         },
         {
-          src: require("@/assets/image/section4/img_c_card_mo_24.png"),
+          src: require("@/assets/image/section4/img_c_card_mo_open24.png"),
         },
       ],
       chacCardData: {},
@@ -384,6 +384,54 @@ export default {
           charText: "동보희 이야기 보러가기",
           videoUrl: "https://www.youtube.com/embed/U2d-hqkKVVM",
         },
+        {
+          char1: require("@/assets/image/pc_card/char19.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle19.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub19.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo19.png"),
+          charText: "공차니 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/BcXrcw4LtpA",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char20.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle20.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub20.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo20.png"),
+          charText: "세일러맨 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/Y3LHnl6Gr8Y",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char21.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle21.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub21.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo21.png"),
+          charText: "추앙애 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/Nso8u3VYUOw",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char22.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle22.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub22.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo22.png"),
+          charText: "조광남 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/VKlFcnkNxiA",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char23.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle23.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub23.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo23.png"),
+          charText: "주미호 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/1fyhhKQlcIY",
+        },
+        {
+          char1: require("@/assets/image/pc_card/char24.png"),
+          charTitle1: require("@/assets/image/pc_card/charTitle24.png"),
+          charTitleSub1: require("@/assets/image/pc_card/charTitleSub24.png"),
+          charVideo1: require("@/assets/image/pc_card/charVideo24.png"),
+          charText: "김나비 이야기 보러가기",
+          videoUrl: "https://www.youtube.com/embed/GSFBtvATNw0",
+        },
       ],
     });
     const showCardClick = (index) => {
@@ -457,6 +505,30 @@ export default {
           state.chacCardData = state.charCard[index];
           break;
         case 17:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 18:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 19:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 20:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 21:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 22:
+          state.showCard = true;
+          state.chacCardData = state.charCard[index];
+          break;
+        case 23:
           state.showCard = true;
           state.chacCardData = state.charCard[index];
           break;
